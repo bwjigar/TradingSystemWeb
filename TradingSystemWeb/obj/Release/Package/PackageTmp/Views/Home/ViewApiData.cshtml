@@ -1,0 +1,67 @@
+﻿@using MainWebsite.DataAccess
+@model List<ExcelDemandMasDTO>
+@{
+    ViewBag.Title = "ViewApiData";
+    var list = Model.ToList();
+    var list1 = list.Where(_ => _.TYPE_OF_DATA == "JSON").ToList();//select records which in one channel
+    var list2 = list.Where(_ => _.TYPE_OF_DATA == "EXCEL").ToList();
+
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>View Api Data</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 tr-top">
+                    <table class="display table table-striped table-bordered table-condensed ftable" cellspacing="0" id="ViewApiDataTable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Srno</th>
+                                <th>Name</th>
+                                <th>Link</th>
+                                <th>Type Of Data</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ViewApiDataBody">
+
+                            @foreach (var item in list.Select((x, i) => new { Data = x, Index = i + 1 }))
+                            {
+                                <tr id="list1">
+                                    <td>@item.Index</td>
+                                    <td>@item.Data.SUPP_NAME</td>
+                                    @if (@item.Data.FTP_FILE_PATH == null)
+                                    {
+                                        <td title="@item.Data.LINK">@(String.IsNullOrEmpty(item.Data.LINK) ? "''" : (item.Data.LINK.Length > 150) ? item.Data.LINK.Substring(0, 150) + "..." : item.Data.LINK)</td>
+                                    }
+                                    else
+                                    {
+                                        <td title="@item.Data.FTP_FILE_PATH">@(String.IsNullOrEmpty(item.Data.FTP_FILE_PATH) ? "''" : (item.Data.FTP_FILE_PATH.Length > 150) ? item.Data.FTP_FILE_PATH.Substring(0, 150) + "..." : item.Data.FTP_FILE_PATH)</td>
+
+                                    }
+                                    <td>@item.Data.TYPE_OF_DATA</td>
+                                    <td>
+                                        @Ajax.ActionLink("View", "Index", "Home", new { MasSeq = item.Data.SEQ_NO, DataType = item.Data.TYPE_OF_DATA }, new AjaxOptions { HttpMethod = "POST" }, new { @class = "btn btn-primary" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/js/Custom_JS/ViewApiData.js"></script>
+}

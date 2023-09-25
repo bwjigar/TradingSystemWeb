@@ -1,0 +1,60 @@
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csprojAssemblyReference.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CopyComplete
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.pdb

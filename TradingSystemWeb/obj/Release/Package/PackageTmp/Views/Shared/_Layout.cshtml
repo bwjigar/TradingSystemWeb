@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Trading System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link href="~/Content/css/flaticon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Plugins/toastr/toastr.css" rel="stylesheet" />
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+    <link href="~/Content/css/style-grid.css" rel="stylesheet" />
+    <link href="~/Content/css/custom.css" rel="stylesheet" />
+    <link href="~/Content/css/ag-theme-balham.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+
+    <style>
+        #loading {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            opacity: .5;
+            background-color: #000;
+            z-index: 9999;
+            text-align: center;
+        }
+
+        #loading-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 97px;
+        }
+
+        .ag-icon-filter {
+            color: red !important;
+        }
+
+        .loading-overlay {
+            display: none;
+            background: rgba( 26, 26, 26, 0.7 );
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            top: 0;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .loading-overlay-image-container {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            top: 50%;
+            left: 50%;
+            transform: translate( -50%, -50% );
+        }
+
+        .loading-overlay-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            /*background-color:#fff;*/
+        }
+
+        .loading-overlay-img1 {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            /*background-color:#fff;*/
+        }
+
+        .loading-overlay-img2 {
+            width: 250px;
+            height: auto;
+            border-radius: 5px;
+            /*background-color:#fff;*/
+        }
+
+        .loading-overlay-img3 {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+            /*background-color:#fff;*/
+        }
+
+        .loading-overlay-img-spinner {
+            width: 38px;
+            height: auto;
+            border-radius: 5px;
+            /*background-color:#fff;*/
+        }
+
+        .offerrow {
+            background-color: #CCFFFF !important; /*lightblue !important;*/
+        }
+
+        .upcomingrow {
+            background-color: #FFFF99 !important; /*lightyellow !important;*/
+        }
+
+        .multiselect-native-select span {
+            font-size: 13px;
+        }
+
+        .notify {
+            width: 500px !important;
+        }
+
+        .dismiss {
+            margin-bottom: 1px;
+            color: white;
+            background-color: #299eec;
+            padding: 0px 5px;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .skip {
+            margin-bottom: 1px;
+            color: white;
+            background-color: #ef0f0fb8;
+            padding: 0px 5px;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .dismiss:hover {
+            background-color: #066aad;
+            cursor: pointer;
+        }
+
+        .skip:hover {
+            background-color: #bf0202ed;
+            cursor: pointer;
+        }
+
+        .dropdown-item:active {
+            background-color: inherit;
+        }
+
+        #div_Alerts_Center::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #div_Alerts_Center::-webkit-scrollbar-thumb {
+            background-color: #000000;
+        }
+
+        .Notify-count {
+            color: white;
+            background-color: green;
+            padding: 1px 5px;
+            border-radius: 19px;
+            font-size: 11px;
+            margin-top: -24px;
+            margin-left: -6px;
+            margin-right: -12px;
+        }
+
+        #content-desktop {
+            display: block !important;
+        }
+
+        #content-mobile {
+            display: none !important;
+        }
+
+        @@media screen and (max-width: 1440px) {
+            #imgRapnet1 {
+                max-width: 61%;
+                margin-left: 4px;
+            }
+
+            #imgRapnet2 {
+                max-width: 70%;
+                margin-left: 4px;
+            }
+
+            #imgRapnet3 {
+                max-width: 80%;
+                margin-left: 4px;
+            }
+        }
+
+        @@media screen and (max-width: 425px) {
+            #content-desktop {
+                display: none !important;
+            }
+
+            #content-mobile {
+                display: block !important;
+                margin-top: 66px;
+                margin-left: -390px;
+                margin-bottom: 10px;
+            }
+
+            .topbar {
+                height: 7.375rem !important;
+            }
+
+            #navbar-top {
+                margin-top: -45px;
+            }
+
+            #imgRapnet1 {
+                max-width: 42%;
+                margin-top: -48px;
+                margin-left: 35px;
+            }
+        }
+
+        @@media screen and (max-width: 375px) {
+            #content-mobile {
+                display: block !important;
+                margin-top: 66px;
+                margin-left: -342px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @@media screen and (max-width: 320px) {
+            #content-mobile {
+                display: block !important;
+                margin-top: 66px;
+                margin-left: -285px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .topbar {
+            /*height: 4.375rem;*/
+            height: 4.500rem;
+        }
+        .fs-12{
+            font-size: 12.5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div id="loading-image">
+            @*<img src="~/Content/images/giphy.gif" style="width:60px;" />*@
+            <img src="~/Content/images/loading_img.gif" style="width:150px;" />
+        </div>
+    </div>
+    <div class="loading-overlay"></div>
+    <div class="loading-overlay-image-container">
+        @*<img src="~/Content/images/loader.gif" class="loading-overlay-img" />*@
+        @*<img src="~/Content/images/loader1.gif" class="loading-overlay-img1" />*@
+        @*<img src="~/Content/images/loader3.gif" class="loading-overlay-img2" />*@
+        @*<img src="~/Content/images/MadeupWillingKronosaurus-small.gif" class="loading-overlay-img3" />*@
+        @*<img src="~/Content/images/ZlXo.gif" class="loading-overlay-img3" />*@
+        <img src="~/Content/images/Loader2.gif" class="loading-overlay-img3" />
+        @*<img src="~/Content/images/kkk.gif" class="loading-overlay-img3" />*@
+        @*<img src="~/Content/images/g0R9.gif" class="loading-overlay-img3" />*@
+        @*<img src="~/Content/images/giphy.gif" />*@
+        @*<img src="/Content/images/ic_logo.png" style="animation: rotation-image 2s infinite linear;" class="loading-overlay-img-spinner" />*@
+    </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="~/Content/images/logo.png" class="img-responsive img-one">
+                <img src="~/Content/images/nav-logo.png" class="img-responsive img-two">
+            </div>
+            <div class="sidebar-info">
+                <ul class="data">
+                    <li>
+                        <a href="@Url.Action("Index","Home")">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Column Mapping
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("ViewApiData","Home")">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                            View Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("SaveApiData","Home")">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            Save Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CustomerAPIList","Customer")">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                            Customer API Portal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("APIList","Customer")">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                            API
+                        </a>
+                    </li>
+                    <li style="display:none;">
+                        <a>
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="contnt @ViewBag.ClassName">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar sticky shadow" id="header-nav">
+                <button type="button" id="sidebarCollapse" class="btn btn-info custom-toggle">
+                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                </button>
+                <button type="button" id="" class="btn btn-info custom-toggle two">
+                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                </button>
+                <!-- Topbar Search -->
+                <h5 style="padding-left: 10px;color: #003d66;">Trading System</h5>
+                <ul class="navbar-nav ml-auto" id="navbar-top">
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle alert" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline">Hardik Dobariya</span>
+
+                            <img class="img-profile rounded-circle" src="~/Content/images/user.png">
+
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu user-drop dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <a class="dropdown-item">
+                                <i class="fa fa-user mr-2 text-gray-400" aria-hidden="true"></i>
+                                My Profile
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item">
+                                <i class="fa fa-sign-out mr-2 text-gray-400" aria-hidden="true"></i>
+                                Log Out
+                            </a>
+                        </div>
+                    </li>
+                    @*</div>*@
+                </ul>
+
+            </nav>
+
+            <!-- Begin Page Content -->
+            @*<div class="container-fluid">*@
+
+            @RenderBody()
+            @* </div> *@
+        </div>
+    </div>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top" id="MainHeader">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("BRAIN WAVE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Column Mapping", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Save Data", "SaveApiData", "Home")</li>
+                        <li>@Html.ActionLink("View Data", "ViewApiData", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            @RenderBody()
+            <hr />
+        </div>*@
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/Plugins/jqueryUI/jquery-ui.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/underscore-min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/mdb.min.js"></script>
+    <script src="~/Content/Plugins/toastr/toastr.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+    <link href="~/Content/Select2/select2.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Select2/select2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        var L_curdate = "";
+        $(document).ready(function () {
+            $("#loading").css("display", "none");
+            var IsAlertsCenterOpen = 0;
+            var L_d = new Date();
+            var L_month = L_d.getMonth() + 1;
+            var L_day = L_d.getDate();
+            L_curdate = L_d.getFullYear() + '' + (L_month < 10 ? '0' : '') + L_month + '' + (L_day < 10 ? '0' : '') + '' + L_day + '' + L_d.getHours() + '' + L_d.getMinutes() + '' + L_d.getSeconds();
+
+            $('[data-toggle="tooltip"],[data-toggle="modal"]').tooltip();
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('.contnt').toggleClass('min-content');
+            });
+            $('.custom-toggle.two').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('.contnt').toggleClass('min-content');
+            });
+        });
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            else
+                return true;
+        }
+
+    </script>
+</body>
+</html>

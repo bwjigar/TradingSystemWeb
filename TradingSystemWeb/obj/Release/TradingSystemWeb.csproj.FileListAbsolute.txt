@@ -1,0 +1,228 @@
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\ApplicationInsights.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\csc.exe
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\vbc.exe
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\WebGrease.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Cors.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\ApplicationInsights.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\csc.exe
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\vbc.exe
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Cors.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\WebGrease.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Lib.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csprojAssemblyReference.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CoreCompileInputs.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CopyComplete
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\ApplicationInsights.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\csc.exe
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\vbc.exe
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\TradingSystemWeb.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Cors.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\WebGrease.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\EPPlus.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Lib.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.DependencyCollector.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.Web.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.AI.WindowsServer.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.ApplicationInsights.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Net.Http.Formatting.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Http.Cors.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Helpers.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Mvc.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Optimization.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.Razor.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\System.Web.WebPages.Razor.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Antlr3.Runtime.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.pdb

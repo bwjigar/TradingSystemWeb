@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "API";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+
+}
+@if (Request.QueryString.Count > 0)
+{
+    <input type="hidden" id="hdnId" value="@Request.QueryString["Id"].ToString()" />
+}
+else
+{
+    <input type="hidden" id="hdnId" value="0" />
+
+}
+<link href="~/Content/css/maxcdn_bootstrap.min.css" rel="stylesheet" />
+<div class="container col-md-12">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>API Detail</h2>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal">
+        <div class="col-md-12 col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="txtAPI">API URL <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <input autocomplete="off" class="form-control" id="txtAPI" name="txtAPI" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="txtUserName">User Name</label>
+                <div class="col-sm-9">
+                    <input autocomplete="off" class="form-control" id="txtUserName" maxlength="100" name="txtUserName" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="txtPassword">Password</label>
+                <div class="col-sm-9">
+                    <input autocomplete="off" class="form-control" id="txtPassword" maxlength="100" name="txtPassword" type="text" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="ddlAPIResponse">API Response <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <select class="form-control select2" id="ddlAPIResponse" name="ddlAPIResponse">
+                        <option value="">Select</option>
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="HTML">HTML</option>
+                        <option value="TEXT">TEXT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="txtAPIMethod">API Method</label>
+                <div class="col-sm-9">
+                    <select class="form-control select2" id="ddlAPIMethod" name="ddlAPIMethod">
+                        <option value="">Select</option>
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="txtFileLocation">File Location <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <input autocomplete="off" class="form-control" id="txtFileLocation" name="txtFileLocation" type="text" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="LocationExportType">Export Type <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <select class="form-control select2" id="LocationExportType" name="LocationExportType">
+                        <option value="">Select</option>
+                        <option value="EXCEL (.xlsx)">EXCEL (.xlsx)</option>
+                        <option value="EXCEL (.xls)">EXCEL (.xls)</option>
+                        <option value="CSV">CSV</option>
+                        <option value="XML">XML</option>
+                        <option value="JSON (File)">JSON (File)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="DdlRepeatevery">Repeat Every <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <div class="col-sm-6 col-xs-6 api-plr" style="margin-left: -15px;">
+                        <select class="form-control select2" id="DdlRepeatevery" name="DdlRepeatevery" onchange="Repeatevery();">
+                            <option value="Minute">Minute</option>
+                            <option value="Hour">Hour</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 api-plr" style="float: right;margin-right: -15px;">
+                        <input type="text" id="txtMinute" name="From" value="" class="form-control" autocomplete="off" onkeypress="return isNumberKey(event)" />
+                        <input type="time" id="txtHour" name="From" value="" class="form-control" autocomplete="off" style="display:none;" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="APIName">File Name <span style="color:red;">*</span></label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="APIName" maxlength="100" name="APIName" type="text" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 fs-12" for="APIStatus">API Status</label>
+                <div class="col-sm-9 checkbox" style="padding-left: 38px;">
+                    <input checked="checked" data-val="true" id="APIStatus" name="APIStatus" type="checkbox" value="true"><input name="APIStatus" type="hidden" value="false" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid order-history-section manage-user apifilter">
+
+    <div class="col-12 api-plr">
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="offer-inbtn pull-right">
+                    @if (Request.QueryString.Count > 0 && Convert.ToInt64(Request.QueryString["Id"]) > 0)
+                    {
+                        <li>
+                            <button onclick="SaveApiData();" class="save offer-btn" title="Update"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;Update</button>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <button onclick="SaveApiData();" class="save offer-btn" title="Save"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;Save</button>
+                        </li>
+                    }
+                    @*<li>
+                            <button onclick="Get();" class="save offer-btn" title="Update"><i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp;Get</button>
+                        </li>*@
+                    <li>
+                        <button onclick="Clear();" class="save offer-btn" title="Reset"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;Reset</button>
+                    </li>
+                    <li>
+                        <button onclick="API_List_View();" class="save offer-btn" title="Upload Method View"> <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Back</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/js/Custom_JS/APIDetail.js"></script>
+}

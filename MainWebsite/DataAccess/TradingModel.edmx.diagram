@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d24ec88615b44a5eb8602860a1c81ed7" Name="Diagram1" ZoomLevel="44">
+        <EntityTypeShape EntityType="TradingDBModel.COLOR_MAS" Width="1.5" PointX="2.125" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.CUT_MAS" Width="1.5" PointX="2.125" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.EXCEL_DEMAND_DET" Width="1.5" PointX="2.125" PointY="9.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.FLS_MAS" Width="1.5" PointX="3.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.LAB_MAS" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.POLISH_MAS" Width="1.5" PointX="5.375" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.PURITY_MAS" Width="1.5" PointX="5.375" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.SHAPE_MAS" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.SUPPLIER_MAS" Width="1.5" PointX="5.375" PointY="9.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.SYMM_MAS" Width="1.5" PointX="5.375" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.STOCK" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.CLIENT_STOCK" Width="1.5" PointX="7" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.COLUMN_MAS" Width="1.5" PointX="2.125" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.FANCY_COLOR_MAS" Width="1.5" PointX="2.125" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.EXCEL_DEMAND_MAS" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TradingDBModel.CUSTOMER_MAS" Width="1.5" PointX="7.375" PointY="1.75" />
+        <EntityTypeShape EntityType="TradingDBModel.CUSTOMER_PARA" Width="1.5" PointX="7.375" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

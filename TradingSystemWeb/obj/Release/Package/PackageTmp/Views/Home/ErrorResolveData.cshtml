@@ -1,0 +1,131 @@
+﻿@model MainWebsite.DataAccess.ExcelDemandMasDTO
+@{
+    ViewBag.Title = "ErrorResolveData";
+}
+
+
+<style>
+    .btni {
+        float: right;
+    }
+    .form-control{display:inline-block;}
+    .tr-top {
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+     .space-beetween{margin-left:5px;}
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>Error Resolve Data</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 tr-top">
+                    <label for="clientInfo">File Name</label>
+
+                    @Html.TextBoxFor(m => m.FILE_NAME, new { @class = "form-control", id = "clientInfo", @disabled = true })
+                    <button type="button" id="Rejectstock" class="btn btn-primary space-beetween btni">Reject Selected</button>
+                    <button type="button" id="SaveApi" class="btn btn-primary space-beetween btni">Save Files</button>
+                </div>
+                <div class="col-md-12">
+                    <table class="display table table-striped table-bordered table-condensed ftable" cellspacing="0" id="ErrorSolveTable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="chkAllSelect" name="name" value="" /></th>
+                                <th>Packet No</th>
+                                <th>Report No</th>
+                                <th>Error</th>
+                                <th>Shape</th>
+                                <th>Cts</th>
+                                <th>Color</th>
+                                <th>Purity</th>
+                                <th>Cut</th>
+                                <th>Polish</th>
+                                <th>Symm</th>
+                                <th>Fls</th>
+                                <th>Fls Color</th>
+                                <th>Lab</th>
+                                <th>Rate</th>
+                                <th>Disc %</th>
+                                <th>Net Rate</th>
+                                <th>Net Value</th>
+                                <th>Fancy Color</th>
+                                <th>Color Overtone</th>
+                                <th>Color Intensity</th>
+                                <th>Length</th>
+                                <th>Width</th>
+                                <th>Depth</th>
+                                <th>Ratio</th>
+                                <th>Length Per</th>
+                                <th>Table Per</th>
+                                <th>CH</th>
+                                <th>CA</th>
+                                <th>PH</th>
+                                <th>PA</th>
+                                <th>HA</th>
+                                <th>Girdle Per</th>
+                                <th>Girdle Min</th>
+                                <th>Girdle Max</th>
+                                <th>Girdle</th>
+                                <th>Girdle Cond</th>
+                                <th>Culet</th>
+                                <th>Culet Cond</th>
+                                <th>Shade</th>
+                                <th>Brown</th>
+                                <th>Green</th>
+                                <th>Milky</th>
+                                <th>Luster</th>
+                                <th>Eye Clean</th>
+                                <th>Center Black</th>
+                                <th>Side Black</th>
+                                <th>Center White</th>
+                                <th>Side White</th>
+                                <th>IP</th>
+                                <th>Table Open</th>
+                                <th>Pavillion Open</th>
+                                <th>Crown Open</th>
+                                <th>Girdle Open</th>
+                                <th>Member Comments</th>
+                                <th>City</th>
+                                <th>Country</th>
+                                <th>Key to Symbols</th>
+                                <th>Report Comments</th>
+                                <th>Star</th>
+                                <th>Lower Half</th>
+                                @*<th>Inscription</th>*@
+                                <th>Polish Features</th>
+                                <th>Symm Features</th>
+                                <th>Graining</th>
+                                <th>Color Desc</th>
+                                <th>Clarity Status</th>
+                                <th>Painting Comments</th>
+                                <th>Result Date</th>
+                                <th>Lab Shape</th>
+                                @*<th>DNA</th>
+                                    <th>Image Path</th>
+                                    <th>Video Path</th>*@
+                                <th>Status</th>
+                                <th>Trans Date</th>
+                                <th>LWD</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ErrorSolveBody">
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/js/Custom_JS/ErrorPage.js"></script>
+}

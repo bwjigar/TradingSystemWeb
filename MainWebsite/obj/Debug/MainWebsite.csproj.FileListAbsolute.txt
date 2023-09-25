@@ -1,0 +1,156 @@
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojResolveAssemblyReference.cache
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+E:\MyWorkProject\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojAssemblyReference.cache
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojAssemblyReference.cache
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\Chintan\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojAssemblyReference.cache
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\Hardik_Files\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojAssemblyReference.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csprojAssemblyReference.cache
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.AssemblyReference.cache

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TradingDBModelStoreContainer" CdmEntityContainer="TradingDBEntities">
+    <EntitySetMapping Name="COLOR_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.COLOR_MAS">
+        <MappingFragment StoreEntitySet="COLOR_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUT_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.CUT_MAS">
+        <MappingFragment StoreEntitySet="CUT_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXCEL_DEMAND_DET">
+      <EntityTypeMapping TypeName="TradingDBModel.EXCEL_DEMAND_DET">
+        <MappingFragment StoreEntitySet="EXCEL_DEMAND_DET">
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="COLUMN_SEQ" ColumnName="COLUMN_SEQ" />
+          <ScalarProperty Name="EXCEL_COLUMN" ColumnName="EXCEL_COLUMN" />
+          <ScalarProperty Name="DB_COLUMN" ColumnName="DB_COLUMN" />
+          <ScalarProperty Name="MAS_SEQ" ColumnName="MAS_SEQ" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLS_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.FLS_MAS">
+        <MappingFragment StoreEntitySet="FLS_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LAB_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.LAB_MAS">
+        <MappingFragment StoreEntitySet="LAB_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POLISH_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.POLISH_MAS">
+        <MappingFragment StoreEntitySet="POLISH_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PURITY_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.PURITY_MAS">
+        <MappingFragment StoreEntitySet="PURITY_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHAPE_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.SHAPE_MAS">
+        <MappingFragment StoreEntitySet="SHAPE_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUPPLIER_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.SUPPLIER_MAS">
+        <MappingFragment StoreEntitySet="SUPPLIER_MAS">
+          <ScalarProperty Name="TRANS_DATE" ColumnName="TRANS_DATE" />
+          <ScalarProperty Name="PHONE_NO" ColumnName="PHONE_NO" />
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="EMAIL_ID" ColumnName="EMAIL_ID" />
+          <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYMM_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.SYMM_MAS">
+        <MappingFragment StoreEntitySet="SYMM_MAS">
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STOCKs">
+      <EntityTypeMapping TypeName="TradingDBModel.STOCK">
+        <MappingFragment StoreEntitySet="STOCK">
+          <ScalarProperty Name="LWD" ColumnName="LWD" />
+          <ScalarProperty Name="TRANS_DATE" ColumnName="TRANS_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="VIDEO_PATH" ColumnName="VIDEO_PATH" />
+          <ScalarProperty Name="IMAGE_PATH" ColumnName="IMAGE_PATH" />
+          <ScalarProperty Name="DNA" ColumnName="DNA" />
+          <ScalarProperty Name="LAB_SHAPE" ColumnName="LAB_SHAPE" />
+          <ScalarProperty Name="RESULT_DATE" ColumnName="RESULT_DATE" />
+          <ScalarProperty Name="PAINTING_COMMENTS" ColumnName="PAINTING_COMMENTS" />
+          <ScalarProperty Name="CLARITY_STATUS" ColumnName="CLARITY_STATUS" />
+          <ScalarProperty Name="COLOR_DESC" ColumnName="COLOR_DESC" />
+          <ScalarProperty Name="GRAINING" ColumnName="GRAINING" />
+          <ScalarProperty Name="SYMM_FEATURES" ColumnName="SYMM_FEATURES" />
+          <ScalarProperty Name="POLISH_FEATURES" ColumnName="POLISH_FEATURES" />
+          <ScalarProperty Name="INSCRIPTION" ColumnName="INSCRIPTION" />
+          <ScalarProperty Name="LOWER_HALF" ColumnName="LOWER_HALF" />
+          <ScalarProperty Name="STAR" ColumnName="STAR" />
+          <ScalarProperty Name="REPORT_COMMENTS" ColumnName="REPORT_COMMENTS" />
+          <ScalarProperty Name="KEY_TO_SYMBOLS" ColumnName="KEY_TO_SYMBOLS" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="MEMBER_COMMENTS" ColumnName="MEMBER_COMMENTS" />
+          <ScalarProperty Name="GIRDLE_OPEN" ColumnName="GIRDLE_OPEN" />
+          <ScalarProperty Name="CROWN_OPEN" ColumnName="CROWN_OPEN" />
+          <ScalarProperty Name="PAVILLION_OPEN" ColumnName="PAVILLION_OPEN" />
+          <ScalarProperty Name="TABLE_OPEN" ColumnName="TABLE_OPEN" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="SIDE_WHITE" ColumnName="SIDE_WHITE" />
+          <ScalarProperty Name="CENTER_WHITE" ColumnName="CENTER_WHITE" />
+          <ScalarProperty Name="SIDE_BLACK" ColumnName="SIDE_BLACK" />
+          <ScalarProperty Name="CENTER_BLACK" ColumnName="CENTER_BLACK" />
+          <ScalarProperty Name="EYE_CLEAN" ColumnName="EYE_CLEAN" />
+          <ScalarProperty Name="LUSTER" ColumnName="LUSTER" />
+          <ScalarProperty Name="MILKY" ColumnName="MILKY" />
+          <ScalarProperty Name="GREEN" ColumnName="GREEN" />
+          <ScalarProperty Name="BROWN" ColumnName="BROWN" />
+          <ScalarProperty Name="SHADE" ColumnName="SHADE" />
+          <ScalarProperty Name="CULET_COND" ColumnName="CULET_COND" />
+          <ScalarProperty Name="CULET" ColumnName="CULET" />
+          <ScalarProperty Name="GIRDLE_COND" ColumnName="GIRDLE_COND" />
+          <ScalarProperty Name="GIRDLE" ColumnName="GIRDLE" />
+          <ScalarProperty Name="GIRDLE_MAX" ColumnName="GIRDLE_MAX" />
+          <ScalarProperty Name="GIRDLE_MIN" ColumnName="GIRDLE_MIN" />
+          <ScalarProperty Name="GIRDLE_PER" ColumnName="GIRDLE_PER" />
+          <ScalarProperty Name="HA" ColumnName="HA" />
+          <ScalarProperty Name="PA" ColumnName="PA" />
+          <ScalarProperty Name="PH" ColumnName="PH" />
+          <ScalarProperty Name="CA" ColumnName="CA" />
+          <ScalarProperty Name="CH" ColumnName="CH" />
+          <ScalarProperty Name="TABLE_PER" ColumnName="TABLE_PER" />
+          <ScalarProperty Name="DEPTH_PER" ColumnName="DEPTH_PER" />
+          <ScalarProperty Name="RATIO" ColumnName="RATIO" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="COLOR_INTENSITY" ColumnName="COLOR_INTENSITY" />
+          <ScalarProperty Name="COLOR_OVERTONE" ColumnName="COLOR_OVERTONE" />
+          <ScalarProperty Name="FANCY_COLOR" ColumnName="FANCY_COLOR" />
+          <ScalarProperty Name="NET_VALUE" ColumnName="NET_VALUE" />
+          <ScalarProperty Name="NET_RATE" ColumnName="NET_RATE" />
+          <ScalarProperty Name="DISC_PER" ColumnName="DISC_PER" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="LAB_SEQ" ColumnName="LAB_SEQ" />
+          <ScalarProperty Name="FLS_COLOR" ColumnName="FLS_COLOR" />
+          <ScalarProperty Name="FLS_SEQ" ColumnName="FLS_SEQ" />
+          <ScalarProperty Name="SYMM_SEQ" ColumnName="SYMM_SEQ" />
+          <ScalarProperty Name="POLISH_SEQ" ColumnName="POLISH_SEQ" />
+          <ScalarProperty Name="CUT_SEQ" ColumnName="CUT_SEQ" />
+          <ScalarProperty Name="PURITY_SEQ" ColumnName="PURITY_SEQ" />
+          <ScalarProperty Name="COLOR_SEQ" ColumnName="COLOR_SEQ" />
+          <ScalarProperty Name="CTS" ColumnName="CTS" />
+          <ScalarProperty Name="SHAPE_SEQ" ColumnName="SHAPE_SEQ" />
+          <ScalarProperty Name="REPORT_NO" ColumnName="REPORT_NO" />
+          <ScalarProperty Name="PACKET_NO" ColumnName="PACKET_NO" />
+          <ScalarProperty Name="SUPP_SEQ" ColumnName="SUPP_SEQ" />
+          <ScalarProperty Name="REF_SEQ" ColumnName="REF_SEQ" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_STOCK">
+      <EntityTypeMapping TypeName="TradingDBModel.CLIENT_STOCK">
+        <MappingFragment StoreEntitySet="CLIENT_STOCK">
+          <ScalarProperty Name="LWD" ColumnName="LWD" />
+          <ScalarProperty Name="ERROR_REMARK" ColumnName="ERROR_REMARK" />
+          <ScalarProperty Name="ERROR_FLAG" ColumnName="ERROR_FLAG" />
+          <ScalarProperty Name="TRANS_DATE" ColumnName="TRANS_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="VIDEO_PATH" ColumnName="VIDEO_PATH" />
+          <ScalarProperty Name="IMAGE_PATH" ColumnName="IMAGE_PATH" />
+          <ScalarProperty Name="DNA" ColumnName="DNA" />
+          <ScalarProperty Name="LAB_SHAPE" ColumnName="LAB_SHAPE" />
+          <ScalarProperty Name="RESULT_DATE" ColumnName="RESULT_DATE" />
+          <ScalarProperty Name="PAINTING_COMMENTS" ColumnName="PAINTING_COMMENTS" />
+          <ScalarProperty Name="CLARITY_STATUS" ColumnName="CLARITY_STATUS" />
+          <ScalarProperty Name="COLOR_DESC" ColumnName="COLOR_DESC" />
+          <ScalarProperty Name="GRAINING" ColumnName="GRAINING" />
+          <ScalarProperty Name="SYMM_FEATURES" ColumnName="SYMM_FEATURES" />
+          <ScalarProperty Name="POLISH_FEATURES" ColumnName="POLISH_FEATURES" />
+          <ScalarProperty Name="INSCRIPTION" ColumnName="INSCRIPTION" />
+          <ScalarProperty Name="LOWER_HALF" ColumnName="LOWER_HALF" />
+          <ScalarProperty Name="STAR" ColumnName="STAR" />
+          <ScalarProperty Name="REPORT_COMMENTS" ColumnName="REPORT_COMMENTS" />
+          <ScalarProperty Name="KEY_TO_SYMBOLS" ColumnName="KEY_TO_SYMBOLS" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="MEMBER_COMMENTS" ColumnName="MEMBER_COMMENTS" />
+          <ScalarProperty Name="GIRDLE_OPEN" ColumnName="GIRDLE_OPEN" />
+          <ScalarProperty Name="CROWN_OPEN" ColumnName="CROWN_OPEN" />
+          <ScalarProperty Name="PAVILLION_OPEN" ColumnName="PAVILLION_OPEN" />
+          <ScalarProperty Name="TABLE_OPEN" ColumnName="TABLE_OPEN" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="SIDE_WHITE" ColumnName="SIDE_WHITE" />
+          <ScalarProperty Name="CENTER_WHITE" ColumnName="CENTER_WHITE" />
+          <ScalarProperty Name="SIDE_BLACK" ColumnName="SIDE_BLACK" />
+          <ScalarProperty Name="CENTER_BLACK" ColumnName="CENTER_BLACK" />
+          <ScalarProperty Name="EYE_CLEAN" ColumnName="EYE_CLEAN" />
+          <ScalarProperty Name="LUSTER" ColumnName="LUSTER" />
+          <ScalarProperty Name="MILKY" ColumnName="MILKY" />
+          <ScalarProperty Name="GREEN" ColumnName="GREEN" />
+          <ScalarProperty Name="BROWN" ColumnName="BROWN" />
+          <ScalarProperty Name="SHADE" ColumnName="SHADE" />
+          <ScalarProperty Name="CULET_COND" ColumnName="CULET_COND" />
+          <ScalarProperty Name="CULET" ColumnName="CULET" />
+          <ScalarProperty Name="GIRDLE_COND" ColumnName="GIRDLE_COND" />
+          <ScalarProperty Name="GIRDLE" ColumnName="GIRDLE" />
+          <ScalarProperty Name="GIRDLE_MAX" ColumnName="GIRDLE_MAX" />
+          <ScalarProperty Name="GIRDLE_MIN" ColumnName="GIRDLE_MIN" />
+          <ScalarProperty Name="GIRDLE_PER" ColumnName="GIRDLE_PER" />
+          <ScalarProperty Name="HA" ColumnName="HA" />
+          <ScalarProperty Name="PA" ColumnName="PA" />
+          <ScalarProperty Name="PH" ColumnName="PH" />
+          <ScalarProperty Name="CA" ColumnName="CA" />
+          <ScalarProperty Name="CH" ColumnName="CH" />
+          <ScalarProperty Name="TABLE_PER" ColumnName="TABLE_PER" />
+          <ScalarProperty Name="DEPTH_PER" ColumnName="DEPTH_PER" />
+          <ScalarProperty Name="RATIO" ColumnName="RATIO" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="COLOR_INTENSITY" ColumnName="COLOR_INTENSITY" />
+          <ScalarProperty Name="COLOR_OVERTONE" ColumnName="COLOR_OVERTONE" />
+          <ScalarProperty Name="FANCY_COLOR" ColumnName="FANCY_COLOR" />
+          <ScalarProperty Name="NET_VALUE" ColumnName="NET_VALUE" />
+          <ScalarProperty Name="NET_RATE" ColumnName="NET_RATE" />
+          <ScalarProperty Name="DISC_PER" ColumnName="DISC_PER" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="LAB" ColumnName="LAB" />
+          <ScalarProperty Name="FLS_COLOR" ColumnName="FLS_COLOR" />
+          <ScalarProperty Name="FLS" ColumnName="FLS" />
+          <ScalarProperty Name="SYMM" ColumnName="SYMM" />
+          <ScalarProperty Name="POLISH" ColumnName="POLISH" />
+          <ScalarProperty Name="CUT" ColumnName="CUT" />
+          <ScalarProperty Name="PURITY" ColumnName="PURITY" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="CTS" ColumnName="CTS" />
+          <ScalarProperty Name="SHAPE" ColumnName="SHAPE" />
+          <ScalarProperty Name="REPORT_NO" ColumnName="REPORT_NO" />
+          <ScalarProperty Name="PACKET_NO" ColumnName="PACKET_NO" />
+          <ScalarProperty Name="SUPP_SEQ" ColumnName="SUPP_SEQ" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLUMN_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.COLUMN_MAS">
+        <MappingFragment StoreEntitySet="COLUMN_MAS">
+          <ScalarProperty Name="SORT_NO" ColumnName="SORT_NO" />
+          <ScalarProperty Name="PARA_SYNONYM" ColumnName="PARA_SYNONYM" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="COLUMN_NAME" ColumnName="COLUMN_NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FANCY_COLOR_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.FANCY_COLOR_MAS">
+        <MappingFragment StoreEntitySet="FANCY_COLOR_MAS">
+          <ScalarProperty Name="SYNONYM_LIST" ColumnName="SYNONYM_LIST" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXCEL_DEMAND_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.EXCEL_DEMAND_MAS">
+        <MappingFragment StoreEntitySet="EXCEL_DEMAND_MAS">
+          <ScalarProperty Name="FTP_FILE_PATH" ColumnName="FTP_FILE_PATH" />
+          <ScalarProperty Name="IS_UPLOAD_STRING" ColumnName="IS_UPLOAD_STRING" />
+          <ScalarProperty Name="MULTIPLE_RUN" ColumnName="MULTIPLE_RUN" />
+          <ScalarProperty Name="SERVICE_REFERENCE_PARAM_VALUES" ColumnName="SERVICE_REFERENCE_PARAM_VALUES" />
+          <ScalarProperty Name="SERVICE_REFERENCE_NAME" ColumnName="SERVICE_REFERENCE_NAME" />
+          <ScalarProperty Name="IS_SPACE_BEFORE_TOKEN" ColumnName="IS_SPACE_BEFORE_TOKEN" />
+          <ScalarProperty Name="EXTRA_WORD" ColumnName="EXTRA_WORD" />
+          <ScalarProperty Name="TOKEN_TYPE" ColumnName="TOKEN_TYPE" />
+          <ScalarProperty Name="TOKEN_URL" ColumnName="TOKEN_URL" />
+          <ScalarProperty Name="TOKEN_KEY" ColumnName="TOKEN_KEY" />
+          <ScalarProperty Name="TOKEN_TEXT" ColumnName="TOKEN_TEXT" />
+          <ScalarProperty Name="PARAMETER_TYPE" ColumnName="PARAMETER_TYPE" />
+          <ScalarProperty Name="PARAMETER_VALUE" ColumnName="PARAMETER_VALUE" />
+          <ScalarProperty Name="PARAMETER" ColumnName="PARAMETER" />
+          <ScalarProperty Name="JSON_DATA_TYPE" ColumnName="JSON_DATA_TYPE" />
+          <ScalarProperty Name="REFRESH_MINUTE" ColumnName="REFRESH_MINUTE" />
+          <ScalarProperty Name="TYPE_OF_DATA" ColumnName="TYPE_OF_DATA" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="DATA_FROM" ColumnName="DATA_FROM" />
+          <ScalarProperty Name="PRE_SIGN" ColumnName="PRE_SIGN" />
+          <ScalarProperty Name="DISC_SIGN" ColumnName="DISC_SIGN" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="NARRATION" ColumnName="NARRATION" />
+          <ScalarProperty Name="START_EXCEL_READ_LINE" ColumnName="START_EXCEL_READ_LINE" />
+          <ScalarProperty Name="SUPP_SEQ" ColumnName="SUPP_SEQ" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_MAS">
+      <EntityTypeMapping TypeName="TradingDBModel.CUSTOMER_MAS">
+        <MappingFragment StoreEntitySet="CUSTOMER_MAS">
+          <ScalarProperty Name="FTPHOST" ColumnName="FTPHOST" />
+          <ScalarProperty Name="FILETYPE" ColumnName="FILETYPE" />
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="LINKTYPE" ColumnName="LINKTYPE" />
+          <ScalarProperty Name="CUSTEMAIL" ColumnName="CUSTEMAIL" />
+          <ScalarProperty Name="CUSTSTATUS" ColumnName="CUSTSTATUS" />
+          <ScalarProperty Name="CUSTADDRESS" ColumnName="CUSTADDRESS" />
+          <ScalarProperty Name="CUSTNAME" ColumnName="CUSTNAME" />
+          <ScalarProperty Name="CUSTID" ColumnName="CUSTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_PARA">
+      <EntityTypeMapping TypeName="TradingDBModel.CUSTOMER_PARA">
+        <MappingFragment StoreEntitySet="CUSTOMER_PARA">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DiscBase" ColumnName="DiscBase" />
+          <ScalarProperty Name="CrownBlack" ColumnName="CrownBlack" />
+          <ScalarProperty Name="TableBlack" ColumnName="TableBlack" />
+          <ScalarProperty Name="CrownWhite" ColumnName="CrownWhite" />
+          <ScalarProperty Name="TableWhite" ColumnName="TableWhite" />
+          <ScalarProperty Name="Culet" ColumnName="Culet" />
+          <ScalarProperty Name="Luster" ColumnName="Luster" />
+          <ScalarProperty Name="Shade" ColumnName="Shade" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Fls" ColumnName="Fls" />
+          <ScalarProperty Name="Symm" ColumnName="Symm" />
+          <ScalarProperty Name="Polish" ColumnName="Polish" />
+          <ScalarProperty Name="Cut" ColumnName="Cut" />
+          <ScalarProperty Name="Clarity" ColumnName="Clarity" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ToCTS" ColumnName="ToCTS" />
+          <ScalarProperty Name="FromCTS" ColumnName="FromCTS" />
+          <ScalarProperty Name="Lab" ColumnName="Lab" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

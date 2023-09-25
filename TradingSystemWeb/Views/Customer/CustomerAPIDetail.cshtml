@@ -1,0 +1,1412 @@
+﻿@{
+    ViewBag.Title = "Customer API Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <link href="~/Content/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/css/daterangepicker.css" rel="stylesheet" />
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        .img-block {
+            display: block;
+        }
+
+        .img-none {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #CaratModal .form-control {
+            border: 1px solid black;
+        }
+
+        .api-filter-popup ul.color-whit-box li {
+            display: inline-block;
+            margin: 4px 4px;
+        }
+
+        ul.color-whit-box li.active {
+            background: rgba(0, 61, 102,1) !important;
+            color: #fff !important;
+        }
+
+        ul.color-whit-box li:hover {
+            background-color: #80808017;
+            border: 0.5px solid #003d66;
+        }
+
+        ul.color-whit-box li {
+            border: 0.5px solid #e5e5e5b3;
+            padding: 5px 20px;
+            -webkit-box-shadow: 0 0 2px rgba(0, 61, 102,0.3);
+            -moz-box-shadow: 0 0 2px rgba(0, 61, 102,0.3);
+            box-shadow: 0 0 2px rgba(0, 61, 102,0.3);
+            margin: 2px 4px;
+            transition-duration: 0.3s;
+            -webkit-transition: 0.3s;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #003d66;
+            font-weight: 500;
+            background: #fff;
+            white-space: nowrap;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .custom-box-list p {
+            word-break: break-all;
+            border: 1px solid #ced4da;
+            padding: 0px 4px;
+            font-weight: 400;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            font-size: 13px;
+            height: 35px;
+            line-height: normal;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            overflow: auto;
+            margin: 0;
+        }
+
+        .Fi-Criteria {
+            font-size: 13px;
+        }
+
+        .tabboxdiv > .row {
+            border-bottom: none;
+        }
+        /*.tabboxdiv {
+            height: 100%;
+            box-shadow: none;
+        }*/
+    </style>
+}
+@if (Request.QueryString.Count > 0)
+{
+    <input type="hidden" id="TransId" value="@Request.QueryString["TransId"].ToString()" />
+}
+else
+{
+    <input type="hidden" id="TransId" value="0" />
+
+}
+
+<div class="container-fluid order-history-section manage-user apifilter">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>Customer API Detail</h2>
+            </div>
+        </div>
+    </div>
+    <div class="admin muser">
+        <div class="row m-0 api-full-box">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-11 api-plr" style="text-align:right;">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input checked="checked" class="onpristine onuntouched onvalid onempty chkBx cWEBAPI" id="ApiMethod" name="ApiMethod" type="radio" value="WEBAPI">
+                                <strong>WEB API</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-2 api-plr" style="text-align: right;">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty chkBx cFTP" id="ApiMethod" name="ApiMethod" type="radio" value="FTP">
+                                <strong>FTP</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-2 api-plr" style="text-align:right;">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty chkBx cURL" id="ApiMethod" name="ApiMethod" type="radio" value="URL">
+                                <strong>URL</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-2 api-plr" style="text-align:right;">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty chkBx cLocation" id="ApiMethod" name="ApiMethod" type="radio" value="Location">
+                                <strong>Location</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br />
+        </div>
+        <div id="APIMethodWEBAPI" class="row m-0 api-full-box Div-Method">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="order-title">
+                    <h2>WEB API credential detail</h2>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>User Name <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="WebAPIUserName" maxlength="100" name="WebAPIUserName" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Password <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="WebAPIPassword" maxlength="100" name="WebAPIPassword" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+            </div>
+            <strong style="font-size: 12px; color:red; letter-spacing: 0.5px;" id="sWEBAPI"></strong>
+        </div>
+        <div id="APIMethodFTP" class="row m-0 api-full-box Div-Method" style="display:none;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="order-title">
+                    <h2>FTP credential detail</h2>
+                    <strong style="font-size: 12px;color:red;float:right;margin-top: 16px;">
+                        File will be uploaded in every 30 minutes
+                    </strong>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Type <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <select class="form-control select2" id="FTPType" name="FTPType" onchange="FTPTypeDDL();">
+                                <option value="">Select</option>
+                                <option value="FTP">FTP</option>
+                                <option value="SFTP">SFTP</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>FTP HOST <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="FTPHost" maxlength="100" name="FTPHost" type="text" value="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>FTP Uname <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="FTPUser" maxlength="100" name="FTPUser" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>FTP Password <span style="color:red;margin-left: -4px;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="FTPPass" maxlength="100" name="FTPPass" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Export Type <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <select class="form-control select2" id="FTPExportType" name="FTPExportType">
+                                <option value="">Select</option>
+                                <option value="EXCEL (.xlsx)">EXCEL (.xlsx)</option>
+                                <option value="EXCEL (.xls)">EXCEL (.xls)</option>
+                                <option value="CSV">CSV</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <strong style="font-size: 12px; color:red; letter-spacing: 0.5px;" id="sFTP"></strong>
+        </div>
+        <div id="APIMethodURL" class="row m-0 api-full-box Div-Method" style="display:none;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="order-title">
+                    <h2>URL credential detail</h2>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>User Name <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="URLUserName" maxlength="100" name="URLUserName" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Password <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="URLPassword" maxlength="100" name="URLPassword" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Export Type <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <select class="form-control select2" id="URLExportType" name="URLExportType">
+                                <option value="">Select</option>
+                                <option value="EXCEL (.xlsx)">EXCEL (.xlsx)</option>
+                                <option value="EXCEL (.xls)">EXCEL (.xls)</option>
+                                <option value="CSV">CSV</option>
+                                <option value="XML">XML</option>
+                                <option value="JSON (File)">JSON (File)</option>
+                                <option value="JSON (Browser)">JSON (Browser)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <strong style="font-size: 12px; color:red; letter-spacing: 0.5px;" id="sURL"></strong>
+        </div>
+        <div id="APIMethodLocation" class="row m-0 api-full-box Div-Method" style="display:none;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="order-title">
+                    <h2>Location detail</h2>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-2 col-xs-12 api-plr">
+                            <strong>File Location <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-10 col-xs-5 api-plr">
+                            <input autocomplete="off" class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="txtFileLocation" name="txtFileLocation" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Export Type <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <select class="form-control select2" id="LocationExportType" name="LocationExportType">
+                                <option value="">Select</option>
+                                <option value="EXCEL (.xlsx)">EXCEL (.xlsx)</option>
+                                <option value="EXCEL (.xls)">EXCEL (.xls)</option>
+                                <option value="CSV">CSV</option>
+                                <option value="XML">XML</option>
+                                <option value="JSON (File)">JSON (File)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input checked="checked" class="onpristine onuntouched onvalid onempty chkBx LOnetime" id="Location" name="Location" type="radio" value="Onetime">
+                                <strong>One time</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <div class="order-date common-order">
+                                <input type="text" id="txtOnetimeDate" name="From" value="" class="form-control" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <div class="order-date common-order">
+                                <input type="time" id="txtOnetime" name="From" value="" class="form-control" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-6 col-md-12 col-sm-12 tabbox">
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty chkBx LRepeatevery" id="Location" name="Location" type="radio" value="Repeatevery" autocomplete="off">
+                                <strong>Repeat every</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input type="text" id="txtRepeatevery" name="From" value="" class="form-control" autocomplete="off" onkeypress="return isNumberKey(event)" />
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <select class="form-control select2" id="DdlRepeatevery" name="DdlRepeatevery">
+                                <option value="Minute">Minute</option>
+                                <option value="Hour">Hour</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <strong style="font-size: 12px; color:red; letter-spacing: 0.5px;">File Location Example : C:\inetpub\wwwroot\client\project_32\</strong>
+        </div>
+        <div>
+            <br />
+        </div>
+        <div class="row m-0 api-full-box">
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>File Name <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input class="form-control form-control onpristine onuntouched onvalid onempty onvalid-maxlength" id="APIName" maxlength="100" name="APIName" type="text" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>API Status</strong>
+                        </div>
+                        <div class="col-sm-8 col-xs-5 api-plr">
+                            <input checked="checked" class="form-check-input" data-val="true" data-val-required="The APIStatus field is required." id="APIStatus" name="APIStatus" type="checkbox" value="true"><input name="APIStatus" type="hidden" value="false" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="offer-label mr-4" style="color:red;">Discount: 32.75<br>1) 32.75 + 2 = 34.75<br>2) 32.75 - 2 = 30.75</div>
+                <div class="offer-label mr-4" style="color:red;">Discount: -32.75<br>3) -32.75 + 2 = -30.75<br>4) -32.75 - 2 = -34.75</div>
+                <div class="offer-label" style="color:red;">Value: 100<br>5) 100 + 1% = 101<br>6) 100 - 1% = 99</div>
+            </div>
+        </div>
+        <div>
+            <br />
+        </div>
+        <div class="row m-0 api-full-box">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="order-title">
+                    <h2>API Filter</h2>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Supplier</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedSupplierValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i id="aVendorrefresh" style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedSupplierValue',SupplierList)"></i>
+                                <a id="aVendorselection" href="javascript:void(0);" onclick="ModalShow('Supplier',SupplierList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Location</strong>
+                        </div>
+
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedLocationValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i id="aLocationrefresh" style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedLocationValue',LocationList)"></i>
+                                <a id="aLocationselection" href="javascript:void(0);" onclick="ModalShow('Location',LocationList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Shape</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedShapeValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedShapeValue',ShapeList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Shape',ShapeList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Carat</strong>
+                        </div>
+
+
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedCaratValue"></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="reicon list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetCheckCarat()"></i>
+                                <a href="" data-toggle="modal" data-target="#CaratModal" data-original-title="" title=""><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Color</strong>
+                        </div>
+
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedColorValue" title=""></p>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedColorValue',ColorList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Color',ColorList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Clarity</strong>
+                        </div>
+
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedClarityValue" title=""></p>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedClarityValue',ClarityList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Clarity',ClarityList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Cut</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedCutValue" title=""></p>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedCutValue',CutList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Cut',CutList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Polish</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedPolValue" title=""></p>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedPolValue',PolishList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Polish',PolishList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Sym</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedSymValue" title=""></p>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedSymValue',SymList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Sym',SymList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Fls</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedFLsValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedFLsValue',FlsList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Fls',FlsList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Lab</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedLabValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedLabValue',LabList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('Lab',LabList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0" style="margin-top: 6px !important;">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Length</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromLength" maxlength="6" name="FromLength" onblur="LeaveTextBox('FROM','LENGTH');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToLength" maxlength="6" name="ToLength" onblur="LeaveTextBox('TO','LENGTH');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Width</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromWidth" maxlength="6" name="FromWidth" onblur="LeaveTextBox('FROM','WIDTH');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToWidth" maxlength="6" name="ToWidth" onblur="LeaveTextBox('TO','WIDTH');" type="text" value="0.00" autocomplete="off">
+
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Depth</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromDepth" maxlength="6" name="FromDepth" onblur="LeaveTextBox('FROM','DEPTH');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToDepth" maxlength="6" name="ToDepth" onblur="LeaveTextBox('TO','DEPTH');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Depth(%)</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromDepthPer" maxlength="6" name="FromDepthPer" onblur="LeaveTextBox('FROM','DEPTHPER');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToDepthPer" maxlength="6" name="ToDepthPer" onblur="LeaveTextBox('TO','DEPTHPER');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Table(%)</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromTablePer" maxlength="6" name="FromTablePer" onblur="LeaveTextBox('FROM','TABLEPER');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToTablePer" maxlength="6" name="ToTablePer" onblur="LeaveTextBox('TO','TABLEPER');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Cr Ang</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromCrAng" maxlength="6" name="FromCrAng" onblur="LeaveTextBox('FROM','CRANG');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToCrAng" maxlength="6" name="ToCrAng" onblur="LeaveTextBox('TO','CRANG');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Cr Ht</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromCrHt" maxlength="6" name="FromCrHt" onblur="LeaveTextBox('FROM','CRHT');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToCrHt" maxlength="6" name="ToCrHt" onblur="LeaveTextBox('TO','CRHT');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Pav Ang</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromPavAng" maxlength="6" name="FromPavAng" onblur="LeaveTextBox('FROM','PAVANG');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToPavAng" maxlength="6" name="ToPavAng" onblur="LeaveTextBox('TO','PAVANG');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Pav Ht</strong>
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="FromPavHt" maxlength="6" name="FromPavHt" onblur="LeaveTextBox('FROM','PAVHT');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm-4 col-xs-5 api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" id="ToPavHt" maxlength="6" name="ToPavHt" onblur="LeaveTextBox('TO','PAVHT');" type="text" value="0.00" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 tabbox">
+                <div class="tabboxdiv">
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Key to symbol</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <div class="sym-sec">
+                                <div class="sym-main-wrap" onclick="Key_to_symbolShow();">
+                                    <div class="sym-iner">
+                                        <span id="spanselected">0 - Selected</span> / <span id="spanunselected">0 - Deselected</span>
+                                    </div>
+                                    <div class="sym-btn">
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </div>
+                                <div class="carat-dropdown-main">
+                                    <div class="carat-dropdown-half-col src-shape-main-pcscroll ps-container ps-theme-default row m-0" id="searchkeytosymbol">
+                                        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center;">
+                            <div class="list-icn">
+                                <span class="res-btn" style="margin-right: -3px;"><a href="javascript:void(0);" onclick="resetKeytoSymbol()" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Reset"><i class="fa fa-refresh" aria-hidden="true"></i></a></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row m-0" style="margin-top: 8px !important;">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>BGM</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedBGMValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedBGMValue',BGMList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('BGM',BGMList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Crown Black</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedCrnBlackValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedCrnBlackValue',CrownBlackList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('CrownBlack',CrownBlackList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Table Black</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedTblBlackValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedTblBlackValue',TableBlackList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('TableBlack',TableBlackList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Crown White</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedCrnWhiteValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedCrnWhiteValue',CrownWhiteList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('CrownWhite',CrownWhiteList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Table White</strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <p class="divCheckedTblWhiteValue" title=""></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-2 api-plr p-0" style="text-align: center; ">
+                            <div class="list-icn">
+                                <i style="cursor: pointer;" class="fa fa-refresh" aria-hidden="true" onclick="ResetSelectedAttr('.divCheckedTblWhiteValue',TableWhiteList)"></i>
+                                <a href="javascript:void(0);" onclick="ModalShow('TableWhite',TableWhiteList)"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0" style="margin-top: 8px !important;">
+                        <div class="col-sm-4 col-xs-12 api-plr">
+                            <strong>Image</strong>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty IgYes" id="Img" name="Img" type="radio" value="Yes">
+                                <strong>YES</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty IgNo" id="Img" name="Img" type="radio" value="No">
+                                <strong>NO</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input checked="checked" class="onpristine onuntouched onvalid onempty IgAll" id="Img" name="Img" type="radio" value="All">
+                                <strong>ALL</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row m-0" style="margin-top: 8px !important;">
+                        <div class="col-sm-4 col-xs-12 api-plr">
+                            <strong>Video</strong>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+
+                                <input class="onpristine onuntouched onvalid onempty VdYes" id="Vdo" name="Vdo" type="radio" value="Yes">
+                                <strong>YES</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input class="onpristine onuntouched onvalid onempty VdNo" id="Vdo" name="Vdo" type="radio" value="No">
+                                <strong>NO</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-2 col-xs-5 api-plr">
+                            <label class="cust-chk-bx text-left api-check">
+                                <input checked="checked" class="onpristine onuntouched onvalid onempty VdAll" id="Vdo" name="Vdo" type="radio" value="All">
+                                <strong>ALL</strong>
+                                <span class="cust-chkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row m-0" style="margin-top: 6px !important;">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Price Method <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <select class="form-control select2" id="PricingMethod" name="PricingMethod" onchange="PricingMethodDDL();">
+                                <option value="">Select Method</option>
+                                <option value="Disc">Disc</option>
+                                <option value="Value">Value</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 col-xs-12 api-plr">
+                            <strong>Percentage <span style="color:red;">*</span></strong>
+                        </div>
+                        <div class="col-sm-8 col-sm-8 col-xs-10 custom-box-list api-plr">
+                            <input class="form-control form-control onuntouched onvalid onnot-empty ondirty onvalid-parse onvalid-maxlength" data-val="true" data-val-number="The field Percentage must be a number." disabled="" id="Percentage" max="100" min="-100" name="Percentage" step="1" type="number" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <br />
+        </div>
+        <div class="row m-0 api-full-box">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="clear:both;">
+                <div class="mb-3 mt-2 pull-right">
+                    <button type="button" id="btnAddNewRow" name="btnAddNewRow" class="offer-btn"><i class="fa fa-plus"></i>Add Row</button>
+                </div>
+                <div style="width:100%;overflow-x:auto">
+                    <table id="mytable1" class="table table-bordered " style="display: none;">
+                        <thead>
+                            <tr>
+                                <th style="">Sr.</th>
+                                <th style="">Supplier</th>
+                                <th style="">Location</th>
+                                <th style="">Shape</th>
+                                <th style="">Carat</th>
+                                <th style="">Color</th>
+                                <th style="">Clarity</th>
+                                <th style="">Cut</th>
+                                <th style="">Polish</th>
+                                <th style="">Sym</th>
+                                <th style="">Fls</th>
+                                <th style="">Lab</th>
+                                <th style="">From Length</th>
+                                <th style="">To Length</th>
+                                <th style="">From Width</th>
+                                <th style="">To Width</th>
+                                <th style="">From Depth</th>
+                                <th style="">To Depth</th>
+                                <th style="">From Depth(%)</th>
+                                <th style="">To Depth(%)</th>
+                                <th style="">From Table(%)</th>
+                                <th style="">To Table(%)</th>
+                                <th style="">From Cr Ang</th>
+                                <th style="">To Cr Ang</th>
+                                <th style="">From Cr Ht</th>
+                                <th style="">To Cr Ht</th>
+                                <th style="">From Pav Ang</th>
+                                <th style="">To Pav Ang</th>
+                                <th style="">From Pav Ht</th>
+                                <th style="">To Pav Ht</th>
+                                <th style="">Key to symbol</th>
+                                <th style="">BGM</th>
+                                <th style="">Crown Black</th>
+                                <th style="">Table Black</th>
+                                <th style="">Crown White</th>
+                                <th style="">Table White</th>
+                                <th style="">Image</th>
+                                <th style="">Video</th>
+                                <th style="">Price Method</th>
+                                <th style="">Percentage</th>
+                                <th style="">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTableBody1">
+                            @*@foreach (var item in Model.APIFilters)
+                                {
+                                    <tr id="tr">
+                                        <th class="Row Fi-Criteria" style="">@item.Sr</th>
+                                        <td style=""><span class="Fi-Criteria Vendor">@item.iVendor</span></td>
+                                        <td style=""><span class="Fi-Criteria Location">@item.iLocation</span></td>
+                                        <td style=""><span class="Fi-Criteria Shape">@item.sShape</span></td>
+                                        <td style=""><span class="Fi-Criteria Carat">@item.sPointer</span></td>
+                                        <td style=""><span class="Fi-Criteria Color">@item.sColor</span></td>
+                                        <td style=""><span class="Fi-Criteria Clarity">@item.sClarity</span></td>
+                                        <td style=""><span class="Fi-Criteria Cut">@item.sCut</span></td>
+                                        <td style=""><span class="Fi-Criteria Polish">@item.sPolish</span></td>
+                                        <td style=""><span class="Fi-Criteria Sym">@item.sSymm</span></td>
+                                        <td style=""><span class="Fi-Criteria Fls">@item.sFls</span></td>
+                                        <td style=""><span class="Fi-Criteria Lab">@item.sLab</span></td>
+                                        <td style=""><span class="Fi-Criteria FromLength">@item.dFromLength</span></td>
+                                        <td style=""><span class="Fi-Criteria ToLength">@item.dToLength</span></td>
+                                        <td style=""><span class="Fi-Criteria FromWidth">@item.dFromWidth</span></td>
+                                        <td style=""><span class="Fi-Criteria ToWidth">@item.dToWidth</span></td>
+                                        <td style=""><span class="Fi-Criteria FromDepth">@item.dFromDepth</span></td>
+                                        <td style=""><span class="Fi-Criteria ToDepth">@item.dToDepth</span></td>
+                                        <td style=""><span class="Fi-Criteria FromDepthinPer">@item.dFromDepthPer</span></td>
+                                        <td style=""><span class="Fi-Criteria ToDepthinPer">@item.dToDepthPer</span></td>
+                                        <td style=""><span class="Fi-Criteria FromTableinPer">@item.dFromTablePer</span></td>
+                                        <td style=""><span class="Fi-Criteria ToTableinPer">@item.dToTablePer</span></td>
+                                        <td style=""><span class="Fi-Criteria FromCrAng">@item.dFromCrAng</span></td>
+                                        <td style=""><span class="Fi-Criteria ToCrAng">@item.dToCrAng</span></td>
+                                        <td style=""><span class="Fi-Criteria FromCrHt">@item.dFromCrHt</span></td>
+                                        <td style=""><span class="Fi-Criteria ToCrHt">@item.dToCrHt</span></td>
+                                        <td style=""><span class="Fi-Criteria FromPavAng">@item.dFromPavAng</span></td>
+                                        <td style=""><span class="Fi-Criteria ToPavAng">@item.dToPavAng</span></td>
+                                        <td style=""><span class="Fi-Criteria FromPavHt">@item.dFromPavHt</span></td>
+                                        <td style=""><span class="Fi-Criteria ToPavHt">@item.dToPavHt</span></td>
+                                        <td style=""><span class="Fi-Criteria Keytosymbol">@item.dKeyToSymbol</span></td>
+                                        <td style="display:none;"><span class="Fi-Criteria dCheckKTS">@item.dCheckKTS</span></td>
+                                        <td style="display:none;"><span class="Fi-Criteria dUNCheckKTS">@item.dUNCheckKTS</span></td>
+                                        <td style=""><span class="Fi-Criteria BGM">@item.sBGM</span></td>
+                                        <td style=""><span class="Fi-Criteria CrownBlack">@item.sCrownBlack</span></td>
+                                        <td style=""><span class="Fi-Criteria TableBlack">@item.sTableBlack</span></td>
+                                        <td style=""><span class="Fi-Criteria CrownWhite">@item.sCrownWhite</span></td>
+                                        <td style=""><span class="Fi-Criteria TableWhite">@item.sTableWhite</span></td>
+                                        <td style=""><span class="Fi-Criteria Image">@item.Img</span></td>
+                                        <td style=""><span class="Fi-Criteria Video">@item.Vdo</span></td>
+                                        <td style=""><span class="Fi-Criteria PriceMethod">@item.PriceMethod</span></td>
+                                        <td style=""><span class="Fi-Criteria Percentage">@item.PricePer</span></td>
+                                        <td style=""><i style="cursor:pointer;" class="error RemoveCriteria"><img src="~/Content/images/trash-delete-icon.png" style="width: 20px;" /></i></td>
+                                    </tr>
+                                }*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br />
+        </div>
+        <div class="row m-0 api-full-box">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="TB_ColSetting" class="tab-pane active">
+                    <div class="row mg0 pd5" style="text-align: center;">
+                        <div class="col-md-12 table-responsive">
+                            <table id="mytable" class="table table-hover table-bordered" style="height: calc(100vh - 240px); display: inline-block;">
+                                <colgroup>
+                                    <col style="width: 5%;">
+                                    <col style="width: 25%;">
+                                    <col style="width: 25%;">
+                                    <col style="width: 35%;">
+                                    <col style="width: 2%;">
+                                    <col style="width: 10%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th style="display: none;"></th>
+                                        <th></th>
+                                        <th>Column Name</th>
+                                        <th>Caption</th>
+                                        <th>Custom Caption</th>
+                                        <th>Order</th>
+                                        <th style="display: none;"></th>
+                                        <th>
+                                            <div class="row" style="margin-left: 10px;">
+                                                <span style="margin-right: 6px;">Visibility</span>
+                                                <img src="~/Content/images/chebox-fill.png" class="img-none" id="chebox_fillImg_Header" onclick="chebox_fill('header')" style="cursor:pointer;width: 20px;height: 19px;" />
+                                                <img src="~/Content/images/chebox-empty.png" class="img-block" id="chebox_emptyImg_Header" onclick="chebox_empty('header')" style="cursor:pointer;width: 20px;height: 19px;" />
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTableBody" class="ui-sortable">
+                                    @*@foreach (var item in Model.ColumnList)
+                                        {
+                                            <tr>
+                                                <td id="lblCoolName" style="display: none;"></td>
+                                                <td><i style="cursor: move;" class="fa fa-bars" aria-hidden="true"></i></td>
+                                                <td id="lblFieldName" class="onbinding">@item.sUser_ColumnName</td>
+                                                <td class="CustName">
+                                                    <input onblur="" type="text" class="form-control form-control onpristine onvalid onnot-empty onvalid-maxlength ontouched" value="@item.sCustMiseCaption" maxlength="100">
+                                                </td>
+                                                <td id="lblColId" style="display: none; " class="onbinding">@item.icolumnId</td>
+                                                <td id="lblOrder" class="ColumnOrder onbinding">@item.iPriority</td>
+
+                                                <td>
+                                                    <center>
+                                                        @if (item.IsActive)
+                                                        {
+                                                            <img src="~/Content/images/chebox-fill.png" class="chebox-fill img-block" id="chebox_fillImg_@item.icolumnId" onclick="chebox_fill('@item.icolumnId')" style="cursor:pointer;width: 20px;" />
+                                                            <img src="~/Content/images/chebox-empty.png" class="chebox-empty img-none" id="chebox_emptyImg_@item.icolumnId" onclick="chebox_empty('@item.icolumnId')" style="cursor:pointer;width: 20px;margin-bottom: 7px;" />
+                                                        }
+                                                        else
+                                                        {
+                                                            <img src="~/Content/images/chebox-fill.png" class="chebox-fill img-none" id="chebox_fillImg_@item.icolumnId" onclick="chebox_fill('@item.icolumnId')" style="cursor:pointer;width: 20px;" />
+                                                            <img src="~/Content/images/chebox-empty.png" class="chebox-empty img-block" id="chebox_emptyImg_@item.icolumnId" onclick="chebox_empty('@item.icolumnId')" style="cursor:pointer;width: 20px;margin-top: 0px;" />
+                                                        }
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        }*@
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br />
+        </div>
+        <div class="col-12 api-plr">
+            <div class="myoffer-form api-btn">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="offer-inbtn pull-right">
+                            @if (Request.QueryString.Count > 0 && Convert.ToInt64(Request.QueryString["TransId"]) > 0)
+                            {
+                                <li>
+                                    <button onclick="SaveApiData();" class="save offer-btn" title="Update"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;Update</button>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <button onclick="SaveApiData();" class="save offer-btn" title="Save"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;Save</button>
+                                </li>
+                            }
+                            <li>
+                                <button onclick="Clear();" class="save offer-btn" title="Reset"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;Reset</button>
+                            </li>
+                            <li>
+                                <button onclick="API_List_View();" class="save offer-btn" title="Upload Method View"> <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Back</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------- Modal -------------------->
+<div class="modal social-model fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog search-width api-filter-popup modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title ng-binding" id="exampleModalLabel"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12" style="overflow-y: auto;max-height: 350px;">
+                    <div class="popup-field">
+                        <div id="divModal" class="ng-hide">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-footer" class="modal-footer search-model-footer">
+                @*<button type="button" class="btn btn-primary" ng-click="ResetSelectedAttr(ParameterLabel);">Reset</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal social-model fade" id="CaratModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg cst-inpt-mn" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Carat</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="popup-field">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mrg1">
+
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size2" onchange="GetSelectedCarat()">
+                                        0.18-0.22
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize2" placeholder="0.18" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize2" placeholder="0.22" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size3" onchange="GetSelectedCarat()">
+                                        0.23-0.29
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize3" placeholder="0.23" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize3" placeholder="0.29" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size4" onchange="GetSelectedCarat()">
+                                        0.30-0.39
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize4" placeholder="0.30" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize4" placeholder="0.39" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size5" onchange="GetSelectedCarat()">
+                                        0.40-0.49
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize5" placeholder="0.40" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize5" placeholder="0.49" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size6" onchange="GetSelectedCarat()">
+                                        0.50-0.59
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize6" placeholder="0.50" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize6" placeholder="0.59" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size7" onchange="GetSelectedCarat()">
+                                        0.60-0.69
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize7" placeholder="0.60" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize7" placeholder="0.69" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size8" onchange="GetSelectedCarat()">
+                                        0.70-0.79
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize8" placeholder="0.70" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize8" placeholder="0.79" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mrg1">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size9" onchange="GetSelectedCarat()">
+                                        0.80-0.89
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize9" placeholder="0.80" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize9" placeholder="0.89" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size10" onchange="GetSelectedCarat()">
+                                        0.90-0.99
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize10" placeholder="0.90" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize10" placeholder="0.99" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size11" onchange="GetSelectedCarat()">
+                                        1.00-1.19
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize11" placeholder="1.00" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize11" placeholder="1.19" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size12" onchange="GetSelectedCarat()">
+                                        1.20-1.49
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize12" placeholder="1.20" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize12" placeholder="1.49" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size13" onchange="GetSelectedCarat()">
+                                        1.50-1.99
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize13" placeholder="1.50" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize13" placeholder="1.69" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size15" onchange="GetSelectedCarat()">
+                                        2.00-2.99
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize15" placeholder="2.00" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize15" placeholder="2.49" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <label class="control-label search-label">
+                                        <input type="checkbox" id="CARAT_Size17" onchange="GetSelectedCarat()">
+                                        3.00-99.99
+                                    </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="FromSize17" placeholder="3.00" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 api-plr">
+                                    <input type="text" class="form-control" id="ToSize17" placeholder="99.99" decimal-number="" onblur="GetSelectedCarat()">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer search-model-footer">
+                <button type="button" class="btn btn-primary" onclick="ResetCheckCarat()">Reset</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/js/moment.min.js"></script>
+    <script src="~/Content/js/daterangepicker.min.js"></script>
+    <script src="~/Content/js/ag-grid-enterprise.min.js"></script>
+    <script src="~/Content/js/Pages/detailCellRenderer.js"></script>
+    <script src="~/Content/js/Custom_JS/CustomerAPIDetail.js"></script>
+}

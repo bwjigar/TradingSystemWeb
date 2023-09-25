@@ -1,0 +1,39 @@
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Lib.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Release\Lib.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Release\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Lib.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\EPPlus.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Lib.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Lib.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Lib.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\EPPlus.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Newtonsoft.Json.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\EPPlus.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Release\Lib.csprojAssemblyReference.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CoreCompileInputs.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CopyComplete
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Release\Lib.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Release\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Release\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Lib.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Lib.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Newtonsoft.Json.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\EPPlus.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.pdb

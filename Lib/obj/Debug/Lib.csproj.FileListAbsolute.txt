@@ -1,0 +1,58 @@
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Project\Hardik_Files\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Project\TRADING PROJECT\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\Brainwaves\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.pdb

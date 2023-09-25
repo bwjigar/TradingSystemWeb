@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TradingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TradingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COLOR_MAS" EntityType="TradingDBModel.COLOR_MAS" />
+    <EntitySet Name="CUT_MAS" EntityType="TradingDBModel.CUT_MAS" />
+    <EntitySet Name="EXCEL_DEMAND_DET" EntityType="TradingDBModel.EXCEL_DEMAND_DET" />
+    <EntitySet Name="FLS_MAS" EntityType="TradingDBModel.FLS_MAS" />
+    <EntitySet Name="LAB_MAS" EntityType="TradingDBModel.LAB_MAS" />
+    <EntitySet Name="POLISH_MAS" EntityType="TradingDBModel.POLISH_MAS" />
+    <EntitySet Name="PURITY_MAS" EntityType="TradingDBModel.PURITY_MAS" />
+    <EntitySet Name="SHAPE_MAS" EntityType="TradingDBModel.SHAPE_MAS" />
+    <EntitySet Name="SUPPLIER_MAS" EntityType="TradingDBModel.SUPPLIER_MAS" />
+    <EntitySet Name="SYMM_MAS" EntityType="TradingDBModel.SYMM_MAS" />
+    <EntitySet Name="STOCKs" EntityType="TradingDBModel.STOCK" />
+    <EntitySet Name="CLIENT_STOCK" EntityType="TradingDBModel.CLIENT_STOCK" />
+    <EntitySet Name="COLUMN_MAS" EntityType="TradingDBModel.COLUMN_MAS" />
+    <EntitySet Name="FANCY_COLOR_MAS" EntityType="TradingDBModel.FANCY_COLOR_MAS" />
+    <EntitySet Name="EXCEL_DEMAND_MAS" EntityType="TradingDBModel.EXCEL_DEMAND_MAS" />
+    <EntitySet Name="CUSTOMER_MAS" EntityType="TradingDBModel.CUSTOMER_MAS" />
+    <EntitySet Name="CUSTOMER_PARA" EntityType="TradingDBModel.CUSTOMER_PARA" />
+  </EntityContainer>
+  <EntityType Name="COLOR_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int16" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Int16" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CUT_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXCEL_DEMAND_DET">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAS_SEQ" Type="Int32" />
+    <Property Name="DB_COLUMN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EXCEL_COLUMN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="COLUMN_SEQ" Type="Int32" />
+    <Property Name="DISPLAY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FLS_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LAB_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POLISH_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PURITY_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SHAPE_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUPPLIER_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TRANS_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SYMM_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Byte" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Byte" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STOCK">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="REF_SEQ" Type="Int32" />
+    <Property Name="SUPP_SEQ" Type="Int16" />
+    <Property Name="PACKET_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SHAPE_SEQ" Type="Byte" />
+    <Property Name="CTS" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="COLOR_SEQ" Type="Byte" />
+    <Property Name="PURITY_SEQ" Type="Byte" />
+    <Property Name="CUT_SEQ" Type="Byte" />
+    <Property Name="POLISH_SEQ" Type="Byte" />
+    <Property Name="SYMM_SEQ" Type="Byte" />
+    <Property Name="FLS_SEQ" Type="Byte" />
+    <Property Name="FLS_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAB_SEQ" Type="Byte" />
+    <Property Name="RATE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DISC_PER" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="NET_RATE" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="NET_VALUE" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="FANCY_COLOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_OVERTONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_INTENSITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LENGTH" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="WIDTH" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="DEPTH" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="RATIO" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="DEPTH_PER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="TABLE_PER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="CH" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="CA" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PH" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PA" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="HA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_PER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="GIRDLE_MIN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_MAX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CULET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CULET_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SHADE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BROWN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="GREEN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MILKY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LUSTER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EYE_CLEAN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CENTER_BLACK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SIDE_BLACK" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CENTER_WHITE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SIDE_WHITE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TABLE_OPEN" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PAVILLION_OPEN" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CROWN_OPEN" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_OPEN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MEMBER_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="KEY_TO_SYMBOLS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STAR" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="LOWER_HALF" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="INSCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="POLISH_FEATURES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SYMM_FEATURES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GRAINING" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_DESC" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CLARITY_STATUS" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PAINTING_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RESULT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAB_SHAPE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DNA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="VIDEO_PATH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TRANS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LWD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLIENT_STOCK">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUPP_SEQ" Type="Int16" />
+    <Property Name="PACKET_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SHAPE" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CTS" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="COLOR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PURITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CUT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="POLISH" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SYMM" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLS_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RATE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DISC_PER" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NET_RATE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NET_VALUE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FANCY_COLOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_OVERTONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_INTENSITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LENGTH" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="WIDTH" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="DEPTH" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="RATIO" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="DEPTH_PER" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="TABLE_PER" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CH" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CA" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="PH" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="PA" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="HA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_PER" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="GIRDLE_MIN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_MAX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CULET" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CULET_COND" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SHADE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="BROWN" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="GREEN" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="MILKY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LUSTER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EYE_CLEAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CENTER_BLACK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SIDE_BLACK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CENTER_WHITE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SIDE_WHITE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="TABLE_OPEN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PAVILLION_OPEN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CROWN_OPEN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GIRDLE_OPEN" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="MEMBER_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KEY_TO_SYMBOLS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STAR" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="LOWER_HALF" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="INSCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="POLISH_FEATURES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SYMM_FEATURES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GRAINING" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_DESC" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CLARITY_STATUS" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="PAINTING_COMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RESULT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAB_SHAPE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DNA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="VIDEO_PATH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TRANS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ERROR_FLAG" Type="Boolean" />
+    <Property Name="ERROR_REMARK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LWD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="COLUMN_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COLUMN_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DISPLAY_NAME" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="PARA_SYNONYM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_NO" Type="Int16" />
+  </EntityType>
+  <EntityType Name="FANCY_COLOR_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SYNONYM_LIST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EXCEL_DEMAND_MAS">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUPP_SEQ" Type="Int32" />
+    <Property Name="START_EXCEL_READ_LINE" Type="Int32" />
+    <Property Name="NARRATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FILE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DISC_SIGN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_SIGN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DATA_FROM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LINK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE_OF_DATA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REFRESH_MINUTE" Type="Int32" />
+    <Property Name="JSON_DATA_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PARAMETER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PARAMETER_VALUE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PARAMETER_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TOKEN_TEXT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TOKEN_KEY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TOKEN_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TOKEN_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EXTRA_WORD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IS_SPACE_BEFORE_TOKEN" Type="Boolean" />
+    <Property Name="SERVICE_REFERENCE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICE_REFERENCE_PARAM_VALUES" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MULTIPLE_RUN" Type="Boolean" />
+    <Property Name="IS_UPLOAD_STRING" Type="Boolean" />
+    <Property Name="FTP_FILE_PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_MAS">
+    <Key>
+      <PropertyRef Name="CUSTID" />
+    </Key>
+    <Property Name="CUSTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTADDRESS" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTSTATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTEMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LINKTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FILENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FILETYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FTPHOST" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_PARA">
+    <Key>
+      <PropertyRef Name="CustId" />
+    </Key>
+    <Property Name="CustId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shape" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Lab" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FromCTS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ToCTS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Clarity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Polish" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Symm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fls" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Luster" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Culet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TableWhite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CrownWhite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TableBlack" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CrownBlack" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DiscBase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

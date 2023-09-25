@@ -1,0 +1,256 @@
+﻿@model MainWebsite.DataAccess.ExcelDemandMasDTO
+@{
+    // var CaptionList = (IEnumerable<MainWebsite.DTO.ColumnMasDto>)TempData["CaptionList"];
+    ViewBag.Title = "Home Page";
+    var JsonType = ViewBag.JsonType;
+    var FileType = ViewBag.FileType;
+}
+
+<style>
+    .tr-display {
+        display: flex;
+        top: 5px !important;
+    }
+
+    .form-checkin {
+        margin-left: 15px !important;
+    }
+
+    .tr-apilink {
+        max-width: 100% !important;
+    }
+
+    .tr-top {
+        margin-top: 15px !important;
+    }
+
+    .tr-btn {
+        float: right;
+        margin-left: 5px;
+    }
+
+    .modal-header .close {
+        margin-top: -20px;
+    }
+
+    body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+        margin-right: 0px;
+    }
+
+    .tr-margin-left {
+        margin-left: 5px !important;
+    }
+
+    .modal {
+        overflow: hidden;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    td {
+       
+        text-overflow: ellipsis;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+    
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>Partywise Columns Setting</h2>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm(null, null, FormMethod.Post))
+    {
+        if (Model != null && Model.SEQ_NO != 0)
+        {
+            @Html.HiddenFor(m => m.SEQ_NO);
+
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 tr-display tr-top">
+                        <div class="form-check form-check-inline">
+                            @if (Model == null)
+                            {
+                                @Html.RadioButtonFor(m => m.DATA_FROM, "FOLDER FILE", new { @class = "form-check-input clear", id = "inlineRadio1", @checked = true })
+                            }
+                            else
+                            {
+                                @Html.RadioButtonFor(m => m.DATA_FROM, "FOLDER FILE", new { @class = "form-check-input clear", id = "inlineRadio1" })
+                            }
+                            @Html.Label("Data From Excel", new { @for = "inlineRadio1", @class = "form-check-label" })
+                            @Html.ValidationMessageFor(m => m.DATA_FROM)
+                        </div>
+                        <div class="form-check form-check-inline form-checkin">
+                            @Html.RadioButtonFor(m => m.DATA_FROM, "API FILE", new { @class = "form-check-input clear", id = "inlineRadio2" })
+                            @Html.Label("Data From Api", new { @for = "inlineRadio2", @class = "form-check-label" })
+                            @Html.ValidationMessageFor(m => m.DATA_FROM)
+                        </div>
+                        <div class="form-check form-check-inline form-checkin">
+                            @Html.RadioButtonFor(m => m.DATA_FROM, "FTP FILE", new { @class = "form-check-input clear", id = "inlineRadio3" })
+                            @Html.Label("Data From FTP", new { @for = "inlineRadio3", @class = "form-check-label" })
+                            @Html.ValidationMessageFor(m => m.DATA_FROM)
+                        </div>
+                    </div>
+                    <div class="col-md-12 tr-top">
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.DropDownListFor(m => m.SUPP_SEQ, ViewBag.Suplier as SelectList, "--Party--", new { @class = "form-control clear" })
+                                @Html.ValidationMessageFor(m => m.DATA_FROM)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.NARRATION, new { @class = "form-control clear", placeholder = "Narration" })
+                            </div>
+                            <div class="col-md-3">
+
+                                @Html.DropDownListFor(m => m.TYPE_OF_DATA, ViewBag.TypeData as List<SelectListItem>, "--Type of Data--", new { @class = "form-control clear" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.FILE_NAME, new { @class = "form-control clear", placeholder = "File Name" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 tr-top">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @if (FileType != null)
+                                {
+                                    @Html.TextBoxFor(m => m.LINK, new { @class = "form-control tr-apilink clear", placeholder = "URL/Token URL", disabled = "disabled" })
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m.LINK, new { @class = "form-control tr-apilink clear", placeholder = "URL/Token URL" })
+                                }
+                            </div>
+                            <div class="col-md-6 tr-display">
+                                <div class="form-check form-check-inline">
+                                    @if (JsonType != null)
+                                    {
+                                        if (JsonType == "USING POST METHOD")
+                                        {
+                                            <input class="form-check-input" type="checkbox" id="PostApi" checked value="option1">
+                                            <label class="form-check-label" for="PostApi">Is Post ?</label>
+                                        }
+                                        else
+                                        {
+                                            <input class="form-check-input" type="checkbox" id="PostApi" value="option1">
+                                            <label class="form-check-label" for="PostApi">Is Post ?</label>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <input class="form-check-input" type="checkbox" id="PostApi" value="option1">
+                                        <label class="form-check-label" for="PostApi">Is Post ?</label>
+                                    }
+
+                                </div>
+                                <div class="form-check form-check-inline">
+
+                                    @if (JsonType != null)
+                                    {
+                                        if (JsonType == "USING POST METHOD" && JsonType != "DIRECT DATA FROM LINK")
+                                        {
+                                            <input class="form-check-input tr-margin-left" type="checkbox" checked id="PostPara" value="option1">
+                                            <label class="form-check-label" for="PostPara">Is Parametars ?</label>
+                                        }
+                                        else
+                                        {
+                                            <input class="form-check-input tr-margin-left" type="checkbox" id="PostPara" value="option1">
+                                            <label class="form-check-label" for="PostPara">Is Parametars ?</label>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <input class="form-check-input tr-margin-left" type="checkbox" id="PostPara" value="option1">
+                                        <label class="form-check-label" for="PostPara">Is Parametars ?</label>
+                                    }
+
+                                </div>
+                                <div class="col-md-6">
+                                    @if (FileType == null)
+                                    {
+                                        @Html.TextBoxFor(m => m.FTP_FILE_PATH, new { @class = "form-control margin-up clear", id = "txtftp", placeholder = "FTP Path", disabled = "disabled" })
+
+                                    }
+                                    else
+                                    {
+                                        @Html.TextBoxFor(m => m.FTP_FILE_PATH, new { @class = "form-control margin-up clear", id = "txtftp", placeholder = "FTP Path" })
+                                    }
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-12 tr-top">
+                        <button type="button" id="LoadApi" class="btn btn-primary">Load Data</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 tr-top">
+                        <table class="display table table-striped table-bordered table-condensed ftable" id="CaptionTable">
+                            <thead>
+                                <tr>
+                                    <th>Sr No.</th>
+                                    <th>Caption</th>
+                                    <th>Excel Columns</th>
+                                </tr>
+                            </thead>
+                            <tbody id="CaptionBody"></tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 tr-top">
+                        @Ajax.ActionLink("View Api Data", "ViewApiData", "Home", null, null, new { @class = "btn btn-primary btn-sm tr-btn" })
+                        @Ajax.ActionLink("Save Api Data", "SaveApiData", "Home", null, null, new { @class = "btn btn-primary btn-sm tr-btn" })
+                        <button type="button" id="SaveMapping" class="btn btn-primary btn-sm tr-btn">Save Mapping</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Parametar For Api</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body modalData">
+                    @Html.Partial("ParametarView", new MainWebsite.CommonClass.PostParametarsClass())
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-warning" onclick="ClearText();">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Content/js/Custom_JS/ColumnMapping.js"></script>
+    <script>
+        function ClearText() {
+            $(".data-post-name").val('');
+            $(".data-post-parametars").val('');
+        }
+    </script>
+}

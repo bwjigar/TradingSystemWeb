@@ -1,0 +1,87 @@
+﻿@using MainWebsite.DataAccess
+@model List<ExcelDemandMasDTO>
+@{
+    ViewBag.Title = "SaveApiData";
+    //var list = Model.ToList();
+    //var list1 = list.Where(_ => _.TYPE_OF_DATA == "JSON").ToList();
+    //var list2 = list.Where(_ => _.TYPE_OF_DATA == "EXCEL").ToList();
+
+}
+<style>
+    .btn {
+        float: right;
+    }
+
+    .tr-top {
+        margin-top: 15px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .chk {
+        float: right;
+        padding: 5px 10px 0 0;
+    }
+
+    .space-beetween {
+        margin-left: 5px;
+    }
+
+    .hidshow {
+        display: none;
+    }
+</style>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="order-title">
+                <h2>Save Api Data</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="col-md-12 tr-top">
+
+                    <button type="button" id="SaveApi" class="btn btn-primary space-beetween">Save Selected Files</button>
+                    <button type="button" id="VerifyApi" class="btn btn-primary">Verify Selected Files</button>
+                    <div class="form-check form-check-inline chk hidshow" id="ignorechk">
+                        <input class="form-check-input" type="checkbox" id="IgnoreError" value="">
+                        <label class="form-check-label" for="IgnoreError">Ignore All Error</label>
+                    </div>
+
+                </div>
+                <div class="col-md-12">
+                    <table class="display table table-striped table-bordered table-condensed ftable" cellspacing="0" id="SaveApiTable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="chkAllSelect" name="name" value="" /></th>
+                                <th>Sr no</th>
+                                <th>File Name</th>
+                                <th>File Path</th>
+                                <th>Email</th>
+                                <th>Disc %</th>
+                                <th>Download</th>
+                                <th>Template</th>
+                                <th>Verified</th>
+                                <th>Party Name</th>
+                                <th>Error</th>
+                                <th>Type of Data</th>
+                            </tr>
+                        </thead>
+                        <tbody id="SaveApiBody">
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/js/Custom_JS/SaveApiData.js"></script>
+}

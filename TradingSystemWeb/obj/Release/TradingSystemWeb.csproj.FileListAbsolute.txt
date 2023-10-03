@@ -226,3 +226,4 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystem
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.csproj.CopyComplete
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Release\TradingSystemWeb.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\MessageBoxer.dll

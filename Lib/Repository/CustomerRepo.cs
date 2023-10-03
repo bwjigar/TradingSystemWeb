@@ -718,6 +718,7 @@ namespace Lib.Repository
 
                                     string xml = client.UploadString(_API, InputPara);
                                     client.Dispose();
+                                    API_Response_Insert(APIMst_Id, xml, "", ".xml");
 
                                     ConvertXmlStringToDataTable xDt = new ConvertXmlStringToDataTable();
                                     XmlDocument doc = new XmlDocument();
@@ -725,6 +726,7 @@ namespace Lib.Repository
                                     XmlElement root = doc.DocumentElement;
                                     XmlNodeList elemList = root.GetElementsByTagName("Row");
                                     dt_APIRes = xDt.ConvertXmlNodeListToDataTable(elemList);
+
                                 }
                             }
                             else if (dtAPI.Rows[i]["APIResponseFormat"].ToString().ToUpper() == "JSON")
@@ -769,6 +771,7 @@ namespace Lib.Repository
                                             response1.Close();
                                             request1.Abort();
 
+                                            API_Response_Insert(APIMst_Id, json, "",".json");
 
                                             JObject o = JObject.Parse(json);
                                             var t = string.Empty;
@@ -792,7 +795,7 @@ namespace Lib.Repository
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
 
-
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                         }
                                         catch (WebException ex)
                                         {
@@ -879,7 +882,7 @@ namespace Lib.Repository
                                                 response1.Close();
                                                 request1.Abort();
 
-
+                                                API_Response_Insert(APIMst_Id, json, "", ".json");
                                                 JObject o = JObject.Parse(json);
                                                 var t = string.Empty;
                                                 if (o != null)
@@ -902,7 +905,7 @@ namespace Lib.Repository
                                                 json = json.Replace("[", "").Replace("]", "");
                                                 json = json.Replace("null", "");
 
-
+                                                API_Response_Insert(APIMst_Id, "", json, ".json");
                                             }
                                             catch (WebException ex)
                                             {
@@ -980,6 +983,7 @@ namespace Lib.Repository
                                                     json = client.UploadString("https://www.jpdiam.com/plugin/apitool", inputJson);
                                                     client.Dispose();
 
+                                                    API_Response_Insert(APIMst_Id, json, "", ".json");
                                                     JObject o = JObject.Parse(json);
                                                     var t = string.Empty;
                                                     if (o != null)
@@ -999,6 +1003,7 @@ namespace Lib.Repository
 
                                                     json = json.Replace("[", "").Replace("]", "");
                                                     json = json.Replace("null", "");
+                                                    API_Response_Insert(APIMst_Id, "", json, ".json");
                                                 }
                                                 catch (WebException ex)
                                                 {
@@ -1088,6 +1093,7 @@ namespace Lib.Repository
                                                 response1.Close();
                                                 request1.Abort();
 
+                                                API_Response_Insert(APIMst_Id, json, "", ".json");
                                                 JObject o = JObject.Parse(json);
                                                 var t = string.Empty;
                                                 if (o != null)
@@ -1108,6 +1114,7 @@ namespace Lib.Repository
                                                 json = json.Replace("[", "").Replace("]", "");
                                                 json = json.Replace("null", "");
 
+                                                API_Response_Insert(APIMst_Id, "", json, ".json");
                                             }
                                             catch (WebException ex)
                                             {
@@ -1200,6 +1207,7 @@ namespace Lib.Repository
                                         json = client1.UploadString("https://shairugems.net:8011/api/Buyer/GetStockData", "POST", InputSRJson);
                                         client1.Dispose();
 
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         var settings = new JsonSerializerSettings() { ContractResolver = new NullToEmptyStringResolver() };
                                         var json_1 = JsonConvert.DeserializeObject<SGStockResponse>(json, settings);
 
@@ -1207,8 +1215,7 @@ namespace Lib.Repository
                                         json = JsonConvert.SerializeObject(json_1.Data, settings);
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
-
-
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                         //try
                                         //{
                                         //    string UserId, TokenId;
@@ -1309,6 +1316,8 @@ namespace Lib.Repository
                                         json = client1.UploadString("https://shairugems.net:8011/api/Buyer/GetStockDataIndia", "POST", InputSRJson);
                                         client1.Dispose();
 
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
+
                                         var settings = new JsonSerializerSettings() { ContractResolver = new NullToEmptyStringResolver() };
                                         var json_1 = JsonConvert.DeserializeObject<SGStockResponse>(json, settings);
 
@@ -1316,6 +1325,8 @@ namespace Lib.Repository
                                         json = JsonConvert.SerializeObject(json_1.Data, settings);
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
+
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                     }
                                     else if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://SHAIRUGEMS.NET:8011/API/BUYER/GETSTOCKDATADUBAI")
                                     {
@@ -1349,6 +1360,7 @@ namespace Lib.Repository
                                         json = client1.UploadString("https://shairugems.net:8011/api/Buyer/GetStockDataDubai", "POST", InputSRJson);
                                         client1.Dispose();
 
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         var settings = new JsonSerializerSettings() { ContractResolver = new NullToEmptyStringResolver() };
                                         var json_1 = JsonConvert.DeserializeObject<SGStockResponse>(json, settings);
 
@@ -1356,6 +1368,8 @@ namespace Lib.Repository
                                         json = JsonConvert.SerializeObject(json_1.Data, settings);
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
+
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                     }
                                     else if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTP://PDHK.DIAMX.NET/API/STOCKSEARCH?APITOKEN=3C0DB41E-7B79-48C4-8CBD-1F718DB7263A")
                                     {
@@ -1386,6 +1400,7 @@ namespace Lib.Repository
                                             response.Close();
                                             request.Abort();
 
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
                                             JObject o = JObject.Parse(json);
                                             var t = string.Empty;
                                             if (o != null)
@@ -1405,6 +1420,7 @@ namespace Lib.Repository
                                             json = JsonConvert.SerializeObject(json_1);
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                         }
                                         catch (WebException ex)
                                         {
@@ -1484,6 +1500,7 @@ namespace Lib.Repository
                                             response.Close();
                                             request.Abort();
 
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
                                             JObject o = JObject.Parse(json);
                                             var t = string.Empty;
                                             if (o != null)
@@ -1503,6 +1520,8 @@ namespace Lib.Repository
                                             json = JsonConvert.SerializeObject(json_1);
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
+
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                         }
                                         catch (WebException ex)
                                         {
@@ -1582,6 +1601,7 @@ namespace Lib.Repository
                                             response.Close();
                                             request.Abort();
 
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
                                             JObject o = JObject.Parse(json);
                                             var t = string.Empty;
                                             if (o != null)
@@ -1597,6 +1617,8 @@ namespace Lib.Repository
                                             json = JsonConvert.SerializeObject(json_1);
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
+
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                         }
                                         catch (WebException ex)
                                         {
@@ -1661,6 +1683,7 @@ namespace Lib.Repository
 
                                             if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://VAIBHAVGEMS.CO/PROVIDESTOCK.SVC/GETSTOCK")
                                             {
+                                                API_Response_Insert(APIMst_Id, json, "", ".json");
                                                 JObject o = JObject.Parse(json);
                                                 var t = string.Empty;
                                                 if (o != null)
@@ -1680,6 +1703,7 @@ namespace Lib.Repository
                                                 json = JsonConvert.SerializeObject(json_1);
                                                 json = json.Replace("[", "").Replace("]", "");
                                                 json = json.Replace("null", "");
+                                                API_Response_Insert(APIMst_Id, "", json, ".json");
                                             }
                                         }
                                         catch (WebException ex)
@@ -1761,6 +1785,8 @@ namespace Lib.Repository
                                             response.Close();
                                             request.Abort();
 
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
+
                                             string xml1 = "<?xml version='1.0' encoding='utf-8'?><soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema'><soap:Body><Stock_APIResponse xmlns='http://tempuri.org/' /></soap:Body></soap:Envelope>";
                                             xml1 = xml1.Replace("'", "\"");
                                             json = json.Replace(xml1, "");
@@ -1774,6 +1800,7 @@ namespace Lib.Repository
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
 
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                         }
                                         catch (WebException ex)
                                         {
@@ -1875,6 +1902,8 @@ namespace Lib.Repository
                                                 using (var reader1 = new StreamReader(response1.GetResponseStream()))
                                                 {
                                                     json = reader1.ReadToEnd();
+                                                    API_Response_Insert(APIMst_Id, json, "", ".json");
+
                                                     JObject o = JObject.Parse(json);
                                                     var t = string.Empty;
                                                     if (o != null)
@@ -1893,6 +1922,7 @@ namespace Lib.Repository
                                                     json = JsonConvert.SerializeObject(json_1);
                                                     json = json.Replace("[", "").Replace("]", "");
                                                     json = json.Replace("null", "");
+                                                    API_Response_Insert(APIMst_Id, "", json, ".json");
                                                 }
                                             }
                                             catch (WebException ex)
@@ -1949,8 +1979,11 @@ namespace Lib.Repository
                                         ServicePointManager.Expect100Continue = false;
                                         ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
                                         json = client1.DownloadString("http://kbshk.feedcenter.net:7788/api/GetStonesBySIteID/1022");
-                                        json = json.Replace("[", "").Replace("]", "");
 
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
+
+                                        json = json.Replace("[", "").Replace("]", "");
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                     }
                                     //        else if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "GIA")
                                     //        {
@@ -2107,6 +2140,8 @@ namespace Lib.Repository
                                     //    ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
                                     //    json = client.UploadString("http://45.35.190.142:92/api/User/Login", InputPara1);
                                     //}
+
+
                                     ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                     dt_APIRes = jDt.JsonStringToDataTable(json);
 
@@ -2139,6 +2174,8 @@ namespace Lib.Repository
 
                                         json = client.DownloadString("http://www.starlightdiamonds.in/api/getstock?user=sFAnZcJtofnlrU/URZaYnj3R8yeB8nUOxp6LlFMC3X0=&key=EEQMOjwlGGmJSk4P9aRmgmfO6fuhJUU+NPC3UAjYaaI=&type=json");
                                         client.Dispose();
+
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
 
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
@@ -2185,6 +2222,7 @@ namespace Lib.Repository
                                         json = json.Replace("</body>", "");
                                         json = json.Replace("</html>", "");
 
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
                                     }
@@ -2197,9 +2235,11 @@ namespace Lib.Repository
 
                                         json = client.DownloadString("https://api.finestardiamonds.com/api/v1/diamond/paginate?username=list@sunrisediam.com&password=Sunrise1041");
                                         client.Dispose();
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
 
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
 
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
@@ -2227,11 +2267,12 @@ namespace Lib.Repository
                                             client2.Headers.Add("token", token);
                                             client2.Encoding = Encoding.UTF8;
                                             json = client2.DownloadString("http://PB.prolanceit.in/api/stones");
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
                                             client2.Dispose();
 
                                             json = json.Replace("[", "").Replace("]", "");
                                             json = json.Replace("null", "");
-
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
                                             ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                             dt_APIRes = jDt.JsonStringToDataTable(json);
                                         }
@@ -2244,6 +2285,7 @@ namespace Lib.Repository
                                         ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
                                         json = client.DownloadString(_API);
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         client.Dispose();
 
                                         JObject o = JObject.Parse(json);
@@ -2258,6 +2300,7 @@ namespace Lib.Repository
 
                                         json = json.Substring(1, json.Length - 2);
 
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
                                     }
@@ -2269,7 +2312,9 @@ namespace Lib.Repository
                                         ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
                                         json = client.DownloadString(_API);
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         client.Dispose();
+
 
                                         JOY _data = (new JavaScriptSerializer()).Deserialize<JOY>(json);
                                         ConvertJsonObjectToDataTable jodt = new ConvertJsonObjectToDataTable();
@@ -2289,7 +2334,9 @@ namespace Lib.Repository
                                         JToken objectData = JToken.Parse(json);
                                         var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(objectData.ToString());
                                         json = JsonConvert.SerializeObject(json_1);
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         json = json.Replace("[", "").Replace("]", "");
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
 
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
@@ -2321,9 +2368,11 @@ namespace Lib.Repository
                                         }
                                         var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(t);
                                         json = JsonConvert.SerializeObject(json_1);
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
 
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
                                     }
@@ -2356,8 +2405,10 @@ namespace Lib.Repository
                                         }
                                         var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(t);
                                         json = JsonConvert.SerializeObject(json_1);
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
 
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
@@ -2371,10 +2422,11 @@ namespace Lib.Repository
 
                                         json = client.DownloadString(_API);
                                         client.Dispose();
-
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
                                         json = json.Replace("[", "").Replace("]", "");
                                         json = json.Replace("null", "");
 
+                                        API_Response_Insert(APIMst_Id, "", json, ".json");
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
                                     }
@@ -2387,6 +2439,8 @@ namespace Lib.Repository
 
                                         json = client.DownloadString(_API);
                                         client.Dispose();
+
+                                        API_Response_Insert(APIMst_Id, json, "", ".json");
 
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
@@ -2408,6 +2462,7 @@ namespace Lib.Repository
                                         ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
                                         string response = client.DownloadString(_API);
+                                        API_Response_Insert(APIMst_Id, response, "", ".html");
                                         client.Dispose();
 
                                         string[] res = response.Split('\n');
@@ -2415,7 +2470,6 @@ namespace Lib.Repository
                                         string[] columns = res.Where(w => w == res[0]).ToArray();
 
                                         string[] rows = res.Where(w => w != res[0]).ToArray();
-
 
                                         ConvertStringArrayToDatatable saDt = new ConvertStringArrayToDatatable();
 
@@ -2486,6 +2540,7 @@ namespace Lib.Repository
 
                                         if (!string.IsNullOrEmpty(json))
                                         {
+                                            API_Response_Insert(APIMst_Id, json, "", ".txt");
                                             ConvertCsvToDataTable saDt = new ConvertCsvToDataTable();
                                             dt_APIRes = saDt.CsvToDataTable(json);
                                         }
@@ -2725,7 +2780,48 @@ namespace Lib.Repository
                 throw ex;
             }
         }
+        public static void API_Response_Insert(Int64 APIMst_Id, string APIResponse, string OurResponse, string extension)
+        {
+            try
+            {
+                string _tempPath = HostingEnvironment.MapPath("~/Temp/APIResponse/");
+                if (!Directory.Exists(_tempPath))
+                {
+                    Directory.CreateDirectory(_tempPath);
+                }
+                string filePath = _tempPath + APIMst_Id + "_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_fff") + extension;
 
+                if (!string.IsNullOrEmpty(APIResponse))
+                {
+                    File.WriteAllText(filePath, APIResponse);
+                }
+                else if (!string.IsNullOrEmpty(OurResponse))
+                {
+                    File.WriteAllText(filePath, OurResponse);
+                }
+
+                Database db = new Database();
+                List<IDbDataParameter> para = new List<IDbDataParameter>();
+
+                para.Add(db.CreateParam("APIMst_Id", DbType.Int64, ParameterDirection.Input, APIMst_Id));
+
+                if (!string.IsNullOrEmpty(APIResponse))
+                    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, filePath));
+                else
+                    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+
+                if (!string.IsNullOrEmpty(OurResponse))
+                    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, filePath));
+                else
+                    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+
+                db.ExecuteSP("API_Response_Insert", para.ToArray(), false);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public static ServiceResponse<CommonResponse> SpaceCheck()
         {

@@ -56,3 +56,4 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache

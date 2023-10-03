@@ -571,3 +571,4 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystem
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Debug\TradingSystemWeb.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\obj\Debug\TradingSystemWeb.pdb
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\Lib.dll
+D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\TradingSystemWeb\bin\MessageBoxer.dll

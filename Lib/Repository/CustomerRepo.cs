@@ -771,7 +771,7 @@ namespace Lib.Repository
                                             response1.Close();
                                             request1.Abort();
 
-                                            API_Response_Insert(APIMst_Id, json, "",".json");
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
 
                                             JObject o = JObject.Parse(json);
                                             var t = string.Empty;
@@ -1681,30 +1681,30 @@ namespace Lib.Repository
                                             response.Close();
                                             request.Abort();
 
-                                            if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://VAIBHAVGEMS.CO/PROVIDESTOCK.SVC/GETSTOCK")
+                                            //if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://VAIBHAVGEMS.CO/PROVIDESTOCK.SVC/GETSTOCK")
+                                            //{
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
+                                            JObject o = JObject.Parse(json);
+                                            var t = string.Empty;
+                                            if (o != null)
                                             {
-                                                API_Response_Insert(APIMst_Id, json, "", ".json");
-                                                JObject o = JObject.Parse(json);
-                                                var t = string.Empty;
-                                                if (o != null)
+                                                var test = o.First;
+                                                if (test != null)
                                                 {
-                                                    var test = o.First;
-                                                    if (test != null)
+                                                    var test2 = test.First;
+                                                    if (test2 != null)
                                                     {
-                                                        var test2 = test.First;
-                                                        if (test2 != null)
-                                                        {
-                                                            Console.Write(test2);
-                                                            t = test2.First.First.ToString();
-                                                        }
+                                                        Console.Write(test2);
+                                                        t = test2.First.First.ToString();
                                                     }
                                                 }
-                                                var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(t);
-                                                json = JsonConvert.SerializeObject(json_1);
-                                                json = json.Replace("[", "").Replace("]", "");
-                                                json = json.Replace("null", "");
-                                                API_Response_Insert(APIMst_Id, "", json, ".json");
                                             }
+                                            var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(t);
+                                            json = JsonConvert.SerializeObject(json_1);
+                                            json = json.Replace("[", "").Replace("]", "");
+                                            json = json.Replace("null", "");
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
+                                            //}
                                         }
                                         catch (WebException ex)
                                         {

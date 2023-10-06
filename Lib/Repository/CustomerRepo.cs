@@ -2184,7 +2184,7 @@ namespace Lib.Repository
                                             var t = string.Empty;
                                             if (o != null)
                                             {
-                                                var test = o.First.First.First.First;
+                                                var test = o.Last.Last;
                                                 if (test != null)
                                                 {
                                                     var test2 = test.ToString();
@@ -2203,6 +2203,9 @@ namespace Lib.Repository
                                             json = json.Replace("null", "");
 
                                             API_Response_Insert(APIMst_Id, "", json, ".json");
+
+                                            ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
+                                            dt_APIRes = jDt.JsonStringToDataTable(json);
                                         }
                                         catch (WebException ex)
                                         {

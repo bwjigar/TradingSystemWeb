@@ -37,3 +37,16 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Relea
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CopyComplete
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Release\Lib.pdb
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Lib.dll.config
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Lib.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Lib.pdb
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\EPPlus.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Newtonsoft.Json.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\EPPlus.xml
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.AssemblyReference.cache
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CoreCompileInputs.cache
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Release\Lib.csproj.CopyComplete
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Release\Lib.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Release\Lib.pdb

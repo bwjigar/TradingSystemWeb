@@ -155,3 +155,24 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\o
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.AssemblyReference.cache
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Debug\MessageBoxer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll.config
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\MainWebsite.pdb
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\MessageBoxer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Aspose.Cells.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\EPPlus.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Debug\Newtonsoft.Json.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.AssemblyReference.cache
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.csproj.CopyComplete
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Debug\MainWebsite.pdb

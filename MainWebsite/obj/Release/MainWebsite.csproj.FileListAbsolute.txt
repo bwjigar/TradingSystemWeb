@@ -59,3 +59,24 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\o
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.pdb
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\MainWebsite\bin\Release\MessageBoxer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll.config
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\MainWebsite.pdb
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\MessageBoxer.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Aspose.Cells.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EntityFramework.SqlServer.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\EPPlus.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\bin\Release\Newtonsoft.Json.xml
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.AssemblyReference.cache
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CoreCompileInputs.cache
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.csproj.CopyComplete
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.dll
+D:\Hardik Projects\TradingSystemWeb\MainWebsite\obj\Release\MainWebsite.pdb

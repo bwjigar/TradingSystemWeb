@@ -57,3 +57,15 @@ D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.dll
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.pdb
 D:\Project\Rajeshri_Projects\GIT_TradingSystemWeb\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\Lib.dll.config
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\Lib.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\Lib.pdb
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\EPPlus.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\EPPlus.xml
+D:\Hardik Projects\TradingSystemWeb\Lib\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Debug\Lib.dll
+D:\Hardik Projects\TradingSystemWeb\Lib\obj\Debug\Lib.pdb

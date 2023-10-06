@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\Hardik Projects\Project_Publish\TradingSystemWeb</_PublishTargetUrl>
-    <History>True|2023-10-06T05:05:50.7864074Z;True|2023-08-03T12:37:37.1786332+05:30;True|2023-08-03T12:36:44.8831093+05:30;True|2023-07-31T10:38:04.1010140+05:30;</History>
+    <History>True|2023-10-06T05:56:13.5552594Z;True|2023-10-06T10:35:50.7864074+05:30;True|2023-08-03T12:37:37.1786332+05:30;True|2023-08-03T12:36:44.8831093+05:30;True|2023-07-31T10:38:04.1010140+05:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -33,13 +33,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2023 09:26:13</publishTime>
     </File>
     <File Include="bin/Lib.dll">
-      <publishTime>10/06/2023 09:54:45</publishTime>
+      <publishTime>06/10/2023 11:24:29</publishTime>
     </File>
     <File Include="bin/Lib.dll.config">
       <publishTime>10/06/2023 09:25:54</publishTime>
     </File>
     <File Include="bin/Lib.pdb">
-      <publishTime>10/06/2023 09:54:45</publishTime>
+      <publishTime>06/10/2023 11:24:29</publishTime>
     </File>
     <File Include="bin/MainWebsite.dll">
       <publishTime>10/06/2023 10:35:32</publishTime>
@@ -156,10 +156,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2023 09:26:16</publishTime>
     </File>
     <File Include="bin/TradingSystemWeb.dll">
-      <publishTime>10/06/2023 10:35:38</publishTime>
+      <publishTime>10/06/2023 11:28:08</publishTime>
     </File>
     <File Include="bin/TradingSystemWeb.pdb">
-      <publishTime>10/06/2023 10:35:38</publishTime>
+      <publishTime>10/06/2023 11:28:08</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>10/06/2023 09:26:19</publishTime>

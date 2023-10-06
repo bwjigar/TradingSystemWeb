@@ -2165,7 +2165,57 @@ namespace Lib.Repository
                                     //string json = client.DownloadString(_API);
                                     //client.Dispose();
 
-                                    if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTP://WWW.STARLIGHTDIAMONDS.IN/API/GETSTOCK")
+                                    if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://PCK.SNJDIAM.COM/SHARESTOCK/API?LOGINNAME=SUN&PASSWORD=SNJ123")
+                                    {
+                                        try
+                                        {
+                                            WebClient client = new WebClient();
+                                            client.Headers["User-Agent"] = @"Mozilla/4.0 (Compatible; Windows NT 5.1;MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+                                            ServicePointManager.Expect100Continue = false;
+                                            ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
+                                            json = client.DownloadString("https://pck.snjdiam.com/ShareStock/Api?loginname=sun&password=snj123");
+
+                                            API_Response_Insert(APIMst_Id, json, "", ".json");
+                                            client.Dispose(); 
+
+
+                                            JObject o = JObject.Parse(json);
+                                            var t = string.Empty;
+                                            if (o != null)
+                                            {
+                                                var test = o.First.First.First.First;
+                                                if (test != null)
+                                                {
+                                                    var test2 = test.ToString();
+                                                    t = test2;
+                                                    //var test2 = test.First;
+                                                    //if (test2 != null)
+                                                    //{
+                                                    //    Console.Write(test2);
+                                                    //    t = test2.Root.Last.First.First.First.ToString();
+                                                    //}
+                                                }
+                                            }
+                                            var json_1 = JsonConvert.DeserializeObject<List<dynamic>>(t);
+                                            json = JsonConvert.SerializeObject(json_1);
+                                            json = json.Replace("[", "").Replace("]", "");
+                                            json = json.Replace("null", "");
+
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
+                                        }
+                                        catch (WebException ex)
+                                        {
+                                            Api_Start_End(APIMst_Id, "End");
+                                            ApiLog(APIMst_Id, false, ex.Message.ToString() + ' ' + ex.StackTrace.ToString());
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Api_Start_End(APIMst_Id, "End");
+                                            ApiLog(APIMst_Id, false, ex.Message.ToString() + ' ' + ex.StackTrace.ToString());
+                                        }
+                                    }
+                                    else if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTP://WWW.STARLIGHTDIAMONDS.IN/API/GETSTOCK")
                                     {
                                         WebClient client = new WebClient();
                                         client.Headers["User-Agent"] = @"Mozilla/4.0 (Compatible; Windows NT 5.1;MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";

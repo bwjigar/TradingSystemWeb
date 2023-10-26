@@ -2837,38 +2837,38 @@ namespace Lib.Repository
         {
             try
             {
-                string _tempPath = HostingEnvironment.MapPath("~/Temp/APIResponse/");
-                if (!Directory.Exists(_tempPath))
-                {
-                    Directory.CreateDirectory(_tempPath);
-                }
-                string filePath = _tempPath + APIMst_Id + "_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_fff") + extension;
+                //string _tempPath = HostingEnvironment.MapPath("~/Temp/APIResponse/");
+                //if (!Directory.Exists(_tempPath))
+                //{
+                //    Directory.CreateDirectory(_tempPath);
+                //}
+                //string filePath = _tempPath + APIMst_Id + "_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_fff") + extension;
 
-                if (!string.IsNullOrEmpty(APIResponse))
-                {
-                    File.WriteAllText(filePath, APIResponse);
-                }
-                else if (!string.IsNullOrEmpty(OurResponse))
-                {
-                    File.WriteAllText(filePath, OurResponse);
-                }
+                //if (!string.IsNullOrEmpty(APIResponse))
+                //{
+                //    File.WriteAllText(filePath, APIResponse);
+                //}
+                //else if (!string.IsNullOrEmpty(OurResponse))
+                //{
+                //    File.WriteAllText(filePath, OurResponse);
+                //}
 
-                Database db = new Database();
-                List<IDbDataParameter> para = new List<IDbDataParameter>();
+                //Database db = new Database();
+                //List<IDbDataParameter> para = new List<IDbDataParameter>();
 
-                para.Add(db.CreateParam("APIMst_Id", DbType.Int64, ParameterDirection.Input, APIMst_Id));
+                //para.Add(db.CreateParam("APIMst_Id", DbType.Int64, ParameterDirection.Input, APIMst_Id));
 
-                if (!string.IsNullOrEmpty(APIResponse))
-                    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, filePath));
-                else
-                    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+                //if (!string.IsNullOrEmpty(APIResponse))
+                //    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, filePath));
+                //else
+                //    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
 
-                if (!string.IsNullOrEmpty(OurResponse))
-                    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, filePath));
-                else
-                    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+                //if (!string.IsNullOrEmpty(OurResponse))
+                //    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, filePath));
+                //else
+                //    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
 
-                db.ExecuteSP("API_Response_Insert", para.ToArray(), false);
+                //db.ExecuteSP("API_Response_Insert", para.ToArray(), false);
             }
             catch (Exception ex)
             {

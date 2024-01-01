@@ -2177,7 +2177,7 @@ namespace Lib.Repository
                                             json = client.DownloadString("https://pck.snjdiam.com/ShareStock/Api?loginname=sun&password=snj123");
 
                                             API_Response_Insert(APIMst_Id, json, "", ".json");
-                                            client.Dispose(); 
+                                            client.Dispose();
 
 
                                             JObject o = JObject.Parse(json);
@@ -2483,6 +2483,40 @@ namespace Lib.Repository
                                         ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
                                         dt_APIRes = jDt.JsonStringToDataTable(json);
                                     }
+                                    else if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://SERVICE.HK.CO/APIHKSTOCK?USER=ED1568D0-8519-42AA-83FF-4AB4F4CFB39F&TYPE=JSON")
+                                    {
+                                        try
+                                        {
+                                            WebClient client = new WebClient();
+                                            //client.Headers["User-Agent"] = @"Mozilla/4.0 (Compatible; Windows NT 5.1;MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+                                            ServicePointManager.Expect100Continue = false;
+                                            ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
+                                            json = client.DownloadString("https://service.hk.co/apihkstock?user=ed1568d0-8519-42aa-83ff-4ab4f4cfb39f&type=json");
+                                            API_Response_Insert(APIMst_Id, "", json, ".json");
+
+                                            client.Dispose();
+
+                                            json = json.Replace("[", "").Replace("]", "");
+                                            json = json.Replace("null", "");
+
+                                            if (!(Convert.ToString(json).ToUpper().Contains("TRY AFTER SOME TIMES") || Convert.ToString(json).ToUpper().Contains("THIS IP ADDRESS IS NOT REGISTERED FOR HK WEB LINK SERVICE")))
+                                            {
+                                                ConvertJsonStringToDataTable jDt = new ConvertJsonStringToDataTable();
+                                                dt_APIRes = jDt.JsonStringToDataTable(json);
+                                            }
+                                        }
+                                        catch (WebException ex)
+                                        {
+                                            Api_Start_End(APIMst_Id, "End");
+                                            ApiLog(APIMst_Id, false, ex.Message.ToString() + ' ' + ex.StackTrace.ToString());
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Api_Start_End(APIMst_Id, "End");
+                                            ApiLog(APIMst_Id, false, ex.Message.ToString() + ' ' + ex.StackTrace.ToString());
+                                        }
+                                    }
                                     else
                                     {
                                         WebClient client = new WebClient();
@@ -2532,9 +2566,9 @@ namespace Lib.Repository
                             }
                             else if (dtAPI.Rows[i]["APIResponseFormat"].ToString().ToUpper() == "TEXT")
                             {
+                                string json = "";
                                 if (dtAPI.Rows[i]["APIMethod"].ToString().ToUpper() == "POST")
                                 {
-                                    string json = "";
                                     if (dtAPI.Rows[i]["APIURL"].ToString().ToUpper() == "HTTPS://SS.SRK.BEST/V1/STOCKSHARING/SERVICES")
                                     {
                                         //WebClient client = new WebClient();
@@ -2835,44 +2869,48 @@ namespace Lib.Repository
         }
         public static void API_Response_Insert(Int64 APIMst_Id, string APIResponse, string OurResponse, string extension)
         {
-            try
+            if (Convert.ToString(APIMst_Id).Contains("120020"))
             {
-                //string _tempPath = HostingEnvironment.MapPath("~/Temp/APIResponse/");
-                //if (!Directory.Exists(_tempPath))
-                //{
-                //    Directory.CreateDirectory(_tempPath);
-                //}
-                //string filePath = _tempPath + APIMst_Id + "_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_fff") + extension;
+                try
+                {
+                    string _tempPath = HostingEnvironment.MapPath("~/Temp/APIResponse/");
+                    if (!Directory.Exists(_tempPath))
+                    {
+                        Directory.CreateDirectory(_tempPath);
+                    }
+                    string filePath = _tempPath + APIMst_Id + "_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_fff") + extension;
 
-                //if (!string.IsNullOrEmpty(APIResponse))
-                //{
-                //    File.WriteAllText(filePath, APIResponse);
-                //}
-                //else if (!string.IsNullOrEmpty(OurResponse))
-                //{
-                //    File.WriteAllText(filePath, OurResponse);
-                //}
+                    if (!string.IsNullOrEmpty(APIResponse))
+                    {
+                        File.WriteAllText(filePath, APIResponse);
+                    }
+                    else if (!string.IsNullOrEmpty(OurResponse))
+                    {
+                        File.WriteAllText(filePath, OurResponse);
+                    }
 
-                //Database db = new Database();
-                //List<IDbDataParameter> para = new List<IDbDataParameter>();
+                    Database db = new Database();
+                    List<IDbDataParameter> para = new List<IDbDataParameter>();
 
-                //para.Add(db.CreateParam("APIMst_Id", DbType.Int64, ParameterDirection.Input, APIMst_Id));
+                    para.Add(db.CreateParam("APIMst_Id", DbType.Int64, ParameterDirection.Input, APIMst_Id));
 
-                //if (!string.IsNullOrEmpty(APIResponse))
-                //    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, filePath));
-                //else
-                //    para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+                    if (!string.IsNullOrEmpty(APIResponse))
+                        para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, filePath));
+                    else
+                        para.Add(db.CreateParam("APIResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
 
-                //if (!string.IsNullOrEmpty(OurResponse))
-                //    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, filePath));
-                //else
-                //    para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
+                    if (!string.IsNullOrEmpty(OurResponse))
+                        para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, filePath));
+                    else
+                        para.Add(db.CreateParam("OurResponse", DbType.String, ParameterDirection.Input, DBNull.Value));
 
-                //db.ExecuteSP("API_Response_Insert", para.ToArray(), false);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    db.ExecuteSP("API_Response_Insert", para.ToArray(), false);
+                }
+                catch (Exception ex)
+                {
+                    ApiLog(APIMst_Id, false, ex.Message.ToString() + ' ' + ex.StackTrace.ToString());
+                    throw ex;
+                }
             }
         }
 

@@ -2705,7 +2705,7 @@ namespace Lib.Repository
                                     FileInfo newFile = new FileInfo(filefullpath);
                                     using (ExcelPackage pck = new ExcelPackage(newFile))
                                     {
-                                        ExcelWorksheet ws = pck.Workbook.Worksheets.Add(APIFileName);
+                                        ExcelWorksheet ws = pck.Workbook.Worksheets.Add(APIFileName.Replace(" ","_"));
                                         pck.Workbook.Properties.Title = "API";
                                         ws.Cells["A1"].LoadFromDataTable(dt_APIRes, true);
 
